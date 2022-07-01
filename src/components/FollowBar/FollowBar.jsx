@@ -1,6 +1,6 @@
 import { Button, SearchBox } from "../index";
 
-export const RightSideBox = () => {
+export const FollowBar = () => {
     return (
         <div className="">
                 <SearchBox />

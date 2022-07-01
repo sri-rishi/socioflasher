@@ -1,6 +1,6 @@
 import { GoHome, MdOutlineExplore, BiBookmark, IoMdNotificationsOutline, CgProfile} from "../../assests";
 
-export const Sidebar = () => {
+export const MenuBar = () => {
     return (
         <aside className="">
             <ul className="">

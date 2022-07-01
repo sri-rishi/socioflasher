@@ -1,13 +1,13 @@
-import { Button, FeedPostBox, Navbar, RightSideBox, Sidebar } from "../../components/index";
+import {  FeedSection, FollowBar, MenuBar, Navbar } from "../../components/index";
 
 export const Home = () => {
     return (
         <div>
             <Navbar />
             <main className="">
-                <Sidebar />
-                <FeedPostBox />
-                <RightSideBox />
+                <MenuBar />
+                <FeedSection/>
+                <FollowBar />
             </main>
         </div>
     )

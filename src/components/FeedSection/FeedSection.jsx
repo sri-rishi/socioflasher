@@ -1,7 +1,7 @@
-import { Button } from "../index";
+import { Button } from "../index/index";
 import { BiDotsHorizontalRounded, BsHeart, FaRegComment, IoPaperPlaneOutline, BiBookmark, GrEmoji} from "../../assests";
 
-export const FeedPostBox = () => {
+export const FeedSection = () => {
     return (
         <div className="">
             <div className="">

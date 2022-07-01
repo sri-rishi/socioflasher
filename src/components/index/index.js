@@ -1,15 +1,15 @@
 import { Navbar } from "../Navbar/Navbar";
-import { Sidebar } from "../Sidebar/Sidebar";
+import { MenuBar} from "../Menubar/MenuBar";
 import { SearchBox } from "../Searchbox/SearchBox";
-import { RightSideBox } from "../RightSidebox/RightSideBox";
+import { FollowBar } from "../FollowBar/FollowBar";
 import { Button } from "../Button/Button";
-import { FeedPostBox } from "../FeedPostBox/FeedPostBox";
+import { FeedSection } from "../FeedSection/FeedSection";
 
 export {
     Navbar,
-    Sidebar,
+    MenuBar,
     SearchBox,
-    RightSideBox,
+    FollowBar,
     Button,
-    FeedPostBox
+    FeedSection
 }
