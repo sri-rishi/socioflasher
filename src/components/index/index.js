@@ -3,8 +3,9 @@ import { MenuBar} from "../Menubar/MenuBar";
 import { SearchBox } from "../Searchbox/SearchBox";
 import { FollowBar } from "../FollowBar/FollowBar";
 import { Button } from "../Button/Button";
-import { FeedSection } from "../FeedSection/FeedSection";
+import { FeedPost } from "../FeedPost/FeedPost";
 import { Footer } from "../Footer/Footer";
+import { ProfileImage } from "../ProfileImage/ProfileImage";
 
 export {
     Navbar,
@@ -12,6 +13,7 @@ export {
     SearchBox,
     FollowBar,
     Button,
-    FeedSection,
-    Footer
+    FeedPost,
+    Footer,
+    ProfileImage
 }
