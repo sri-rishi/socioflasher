@@ -5,9 +5,9 @@ export {
     IoMdNotificationsOutline, 
     CgProfile,
     IoMdSearch,
-    BiDotsHorizontalRounded,
-    BsHeart,
-    FaRegComment,
-    IoPaperPlaneOutline,
+    HiOutlineDotsHorizontal,
+    RiHeart3Line,
+    TbMessageCircle2,
+    TbSend,
     GrEmoji
 } from "./icons";

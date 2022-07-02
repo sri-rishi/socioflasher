@@ -1,12 +1,12 @@
 import {GoHome} from "react-icons/go";
+import {RiHeart3Line} from "react-icons/ri";
 import {MdOutlineExplore} from "react-icons/md";
-import {BiDotsHorizontalRounded} from "react-icons/bi";
 import {IoMdNotificationsOutline,IoMdSearch} from "react-icons/io";
 import {CgProfile} from "react-icons/cg";
-import {BsHeart} from "react-icons/bs";
-import {FaRegComment} from "react-icons/fa";
-import {IoPaperPlaneOutline,IoBookmarkOutline} from "react-icons/io5";
-import {GrEmoji} from "react-icons/gr"
+import {IoBookmarkOutline} from "react-icons/io5";
+import {GrEmoji} from "react-icons/gr";
+import {HiOutlineDotsHorizontal} from "react-icons/hi";
+import {TbSend,TbMessageCircle2} from "react-icons/tb"
 
 
 export {
@@ -14,11 +14,11 @@ export {
     MdOutlineExplore,
     IoBookmarkOutline,
     IoMdNotificationsOutline,
-    BiDotsHorizontalRounded,
+    HiOutlineDotsHorizontal,
     CgProfile,
     IoMdSearch,
-    BsHeart,
-    FaRegComment,
-    IoPaperPlaneOutline,
+    RiHeart3Line,
+    TbMessageCircle2,
+    TbSend,
     GrEmoji
 }
