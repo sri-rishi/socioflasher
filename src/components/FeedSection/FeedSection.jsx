@@ -1,5 +1,5 @@
 import { Button } from "../index/index";
-import { BiDotsHorizontalRounded, BsHeart, FaRegComment, IoPaperPlaneOutline, BiBookmark, GrEmoji} from "../../assests";
+import { BiDotsHorizontalRounded, BsHeart, FaRegComment, IoPaperPlaneOutline, IoBookmarkOutline, GrEmoji} from "../../assests";
 
 export const FeedSection = () => {
     return (
@@ -23,7 +23,7 @@ export const FeedSection = () => {
                     <Button className="" icon={<FaRegComment />} />
                     <Button className="" icon={<IoPaperPlaneOutline />} />
                 </div>
-                <Button className="" icon={<BiBookmark />}/>
+                <Button className="" icon={<IoBookmarkOutline />}/>
             </div>
             <div className="">
                 <p className="">

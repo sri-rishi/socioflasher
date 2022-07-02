@@ -1,7 +1,7 @@
 export {
     GoHome, 
     MdOutlineExplore, 
-    BiBookmark, 
+    IoBookmarkOutline, 
     IoMdNotificationsOutline, 
     CgProfile,
     IoMdSearch,
