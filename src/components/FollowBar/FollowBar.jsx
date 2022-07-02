@@ -1,4 +1,4 @@
-import { Button, SearchBox } from "../index";
+import { Button, SearchBox } from "../index/index";
 
 export const FollowBar = () => {
     return (
