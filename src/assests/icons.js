@@ -1,7 +1,7 @@
 export {GoHome} from "react-icons/go";
-export {RiHeart3Line} from "react-icons/ri";
+export {RiHeart3Line, RiNotificationLine} from "react-icons/ri";
 export {MdOutlineExplore} from "react-icons/md";
-export {IoMdNotificationsOutline,IoMdSearch} from "react-icons/io";
+export {IoMdSearch} from "react-icons/io";
 export {CgProfile} from "react-icons/cg";
 export {IoBookmarkOutline} from "react-icons/io5";
 export {GrEmoji} from "react-icons/gr";

@@ -1,8 +1,7 @@
 export {
     GoHome, 
     MdOutlineExplore, 
-    IoBookmarkOutline, 
-    IoMdNotificationsOutline, 
+    IoBookmarkOutline,
     CgProfile,
     IoMdSearch,
     HiOutlineDotsHorizontal,
@@ -11,5 +10,6 @@ export {
     TbSend,
     GrEmoji,
     GiFeather,
-    FiLogOut
+    FiLogOut,
+    RiNotificationLine
 } from "./icons";
