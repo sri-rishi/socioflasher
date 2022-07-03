@@ -22,7 +22,8 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        'top': "0px -1px 5px #888",
+        "top": "0px -1px 5px #888",
+        "all": "0 0 20px #888"
       }
     },
   },
