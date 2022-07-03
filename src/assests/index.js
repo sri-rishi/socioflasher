@@ -9,5 +9,7 @@ export {
     RiHeart3Line,
     TbMessageCircle2,
     TbSend,
-    GrEmoji
+    GrEmoji,
+    GiFeather,
+    FiLogOut
 } from "./icons";
