@@ -24,6 +24,9 @@ module.exports = {
       boxShadow: {
         "top": "0px -1px 5px #888",
         "all": "0 0 20px #888"
+      },
+      margin: {
+        "1/6": "16.6667%",
       }
     },
   },
