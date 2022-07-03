@@ -1,19 +1,9 @@
-import { Navbar } from "../Navbar/Navbar";
-import { MenuBar} from "../Menubar/MenuBar";
-import { SearchBox } from "../Searchbox/SearchBox";
-import { FollowBar } from "../FollowBar/FollowBar";
-import { Button } from "../Button/Button";
-import { FeedPost } from "../FeedPost/FeedPost";
-import { Footer } from "../Footer/Footer";
-import { ProfileImage } from "../ProfileImage/ProfileImage";
-
-export {
-    Navbar,
-    MenuBar,
-    SearchBox,
-    FollowBar,
-    Button,
-    FeedPost,
-    Footer,
-    ProfileImage
-}
+export { Navbar } from "../Navbar/Navbar";
+export { MenuBar} from "../Menubar/MenuBar";
+export { SearchBox } from "../Searchbox/SearchBox";
+export { FollowBar } from "../FollowBar/FollowBar";
+export { Button } from "../Button/Button";
+export { FeedPost } from "../FeedPost/FeedPost";
+export { Footer } from "../Footer/Footer";
+export { ProfileImage } from "../ProfileImage/ProfileImage";
+export { FloatPostBtn } from "../FloatPostBtn/FloatPostBtn";

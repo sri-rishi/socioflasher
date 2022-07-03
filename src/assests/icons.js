@@ -1,24 +1,11 @@
-import {GoHome} from "react-icons/go";
-import {RiHeart3Line} from "react-icons/ri";
-import {MdOutlineExplore} from "react-icons/md";
-import {IoMdNotificationsOutline,IoMdSearch} from "react-icons/io";
-import {CgProfile} from "react-icons/cg";
-import {IoBookmarkOutline} from "react-icons/io5";
-import {GrEmoji} from "react-icons/gr";
-import {HiOutlineDotsHorizontal} from "react-icons/hi";
-import {TbSend,TbMessageCircle2} from "react-icons/tb"
-
-
-export {
-    GoHome,
-    MdOutlineExplore,
-    IoBookmarkOutline,
-    IoMdNotificationsOutline,
-    HiOutlineDotsHorizontal,
-    CgProfile,
-    IoMdSearch,
-    RiHeart3Line,
-    TbMessageCircle2,
-    TbSend,
-    GrEmoji
-}
+export {GoHome} from "react-icons/go";
+export {RiHeart3Line} from "react-icons/ri";
+export {MdOutlineExplore} from "react-icons/md";
+export {IoMdNotificationsOutline,IoMdSearch} from "react-icons/io";
+export {CgProfile} from "react-icons/cg";
+export {IoBookmarkOutline} from "react-icons/io5";
+export {GrEmoji} from "react-icons/gr";
+export {HiOutlineDotsHorizontal} from "react-icons/hi";
+export {TbSend,TbMessageCircle2} from "react-icons/tb";
+export {GiFeather} from "react-icons/gi";
+export {FiLogOut} from "react-icons/fi"
