@@ -1,5 +1,5 @@
-import { Home } from "../home/Home";
+import { Feed } from "../feed/Feed";
 
 export {
-    Home
+    Feed
 }
