@@ -13,3 +13,8 @@ export {
     FiLogOut,
     RiNotificationLine
 } from "./icons";
+
+export {
+    logo
+} from "./images/images"
+
