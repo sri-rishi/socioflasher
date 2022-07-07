@@ -55,7 +55,7 @@ export const MenuBar = () => {
             </ul>
             <div className="xl:w-full flex flex-col xl:items-center ">
                 <Button className={`rounded-full w-14 h-14 bg-sky-600 flex flex-row items-center justify-center text-xl text-white hover:shadow-2xl xl:hidden`} icon={<GiFeather />}/>
-                <Button className="hidden w-full font-semibold bg-sky-600 py-2 px-6 rounded-3xl text-white hover:shadow-md xl:inline" text={"Post"}/>
+                <Button className="hidden w-full font-semibold bg-sky-600 py-2 px-6 rounded-3xl text-white hover:hover:bg-sky-700 xl:inline" text={"Post"}/>
             </div>
         </aside>
     )

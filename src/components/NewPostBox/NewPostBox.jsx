@@ -12,7 +12,7 @@ export const NewPostBox = () => {
                 </div>
             </div>
             <div className="flex flex-row justify-end w-full">
-                <Button className={"font-semibold bg-sky-600 py-1 px-6 rounded-2xl text-white hover:shadow-md"} text={"Post"}/>
+                <Button className={"font-semibold bg-sky-600 py-1 px-6 rounded-2xl text-white hover:bg-sky-700"} text={"Post"}/>
             </div>
         </div>
     )
