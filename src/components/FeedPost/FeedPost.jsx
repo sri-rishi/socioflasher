@@ -1,9 +1,9 @@
 import { Button, ProfileImage } from "../index/index";
-import { HiOutlineDotsHorizontal, RiHeart3Line, TbMessageCircle2, TbSend, IoBookmarkOutline, GrEmoji} from "../../assests";
+import { HiOutlineDotsHorizontal, RiHeart3Line, TbMessageCircle2, IoBookmarkOutline, GrEmoji} from "../../assests";
 
 export const FeedPost = () => {
     return (
-        <div className="flex flex-col border-solid border w-full max-w-lg shadow-md">
+        <div className="flex flex-col border-solid border w-full bg-white max-w-lg">
             <div className="flex flex-row items-center justify-between px-3 py-2">
                 <div className="flex flex-row items-center gap-2.5">
                     <ProfileImage />
@@ -18,7 +18,6 @@ export const FeedPost = () => {
                 <div className="flex gap-8 flex-row items-center">
                     <Button className={"hover:text-gray-600"} icon={<RiHeart3Line />} />
                     <Button className={"hover:text-gray-600"} icon={<TbMessageCircle2 />} />
-                    <Button className={"hover:text-gray-600"} icon={<TbSend />} />
                 </div>
                 <Button icon={<IoBookmarkOutline className="font-extrabold hover:text-gray-600" />}/>
             </div>
