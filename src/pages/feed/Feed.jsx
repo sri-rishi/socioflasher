@@ -11,7 +11,8 @@ export const Feed = () => {
                     <header className="hidden md:flex border-b w-full p-4 text-left sticky top-0 left-0 bg-slate-100">
                         <p className="text-lg font-semibold">Home</p>
                     </header>
-                    <div className="w-full flex flex-col items-center gap-4">
+                    {/* Only this div will remain here evrything else will move to template file */}
+                    <div className="w-full flex flex-col items-center gap-4"> 
                         <NewPostBox />
                         <div className="w-full flex flex-col items-center gap-4 pb-36 md:pb-4">
                             <FeedPost/>
