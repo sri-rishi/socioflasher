@@ -1,3 +1,3 @@
-import logo from "./wdkydhry.png";
+import logo from "./wdkydhry-2.png";
 
 export {logo}
