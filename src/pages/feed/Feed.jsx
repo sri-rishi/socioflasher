@@ -1,4 +1,4 @@
-import {  FeedPost, NewPostBox} from "../../components/index/index";
+import { Post, NewPostBox} from "../../components/index/index";
 import "./feed.css";
 
 export const Feed = () => {
@@ -6,9 +6,9 @@ export const Feed = () => {
         <>
             <NewPostBox />
             <div className="w-full flex flex-col items-center gap-4">
-                <FeedPost/>
-                <FeedPost/>
-                <FeedPost/>
+                <Post/>
+                <Post/>
+                <Post/>
             </div>
         </>
     )
