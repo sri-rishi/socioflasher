@@ -5,7 +5,7 @@ export { FollowBar } from "../FollowBar/FollowBar";
 export { Button } from "../Button/Button";
 export { FeedPost } from "../FeedPost/FeedPost";
 export { Footer } from "../Footer/Footer";
-export { ProfileImage } from "../ProfileImage/ProfileImage";
+export { UserImage } from "../UserImage/UserImage";
 export { FloatPostBtn } from "../FloatPostBtn/FloatPostBtn";
 export {NewPostBox} from "../NewPostBox/NewPostBox";
 export {Header} from "../Header/Header"

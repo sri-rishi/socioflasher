@@ -1,4 +1,4 @@
-import { Button, ProfileImage, SearchBox } from "../index/index";
+import { Button, UserImage, SearchBox } from "../index/index";
 
 export const FollowBar = () => {
     return (
@@ -13,28 +13,28 @@ export const FollowBar = () => {
                             </div>
                             <div className="flex flex-row items-center justify-between py-2 px-1 hover:bg-slate-100">
                                 <div className="flex flex-row items-center gap-2">
-                                    <ProfileImage />
+                                    <UserImage />
                                     <p className="font-semibold text-sm">User Name</p>
                                 </div>
                                 <Button className="bg-sky-600 py-1 px-3 rounded-2xl text-white hover:bg-sky-700" text={"Follow"}/>
                             </div>
                             <div className="flex flex-row items-center justify-between py-2 px-1 hover:bg-slate-100">
                                 <div className="flex flex-row items-center gap-2">
-                                    <ProfileImage />
+                                    <UserImage />
                                     <p className="font-semibold text-sm">User Name</p>
                                 </div>
                                 <Button className="bg-sky-600 py-1 px-3 rounded-2xl text-white hover:bg-sky-700" text={"Follow"}/>
                             </div>
                             <div className="flex flex-row items-center justify-between py-2 px-1 hover:bg-slate-100">
                                 <div className="flex flex-row items-center gap-2">
-                                    <ProfileImage />
+                                    <UserImage />
                                     <p className="font-semibold text-sm">User Name</p>
                                 </div>
                                 <Button className="bg-sky-600 py-1 px-3 rounded-2xl text-white hover:bg-sky-700" text={"Follow"}/>
                             </div>
                             <div className="flex flex-row items-center justify-between py-2 px-1 hover:bg-slate-100">
                                 <div className="flex flex-row items-center gap-2">
-                                    <ProfileImage />
+                                    <UserImage />
                                     <p className="font-semibold text-sm">User Name</p>
                                 </div>
                                 <Button className="bg-sky-600 py-1 px-3 rounded-2xl text-white hover:bg-sky-700" text={"Follow"}/>

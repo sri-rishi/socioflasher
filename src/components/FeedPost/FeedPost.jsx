@@ -1,4 +1,4 @@
-import { Button, ProfileImage } from "../index/index";
+import { Button, UserImage } from "../index/index";
 import { HiOutlineDotsHorizontal, RiHeart3Line, TbMessageCircle2, IoBookmarkOutline, GrEmoji} from "../../assests";
 
 export const FeedPost = () => {
@@ -6,7 +6,7 @@ export const FeedPost = () => {
         <div className="flex flex-col border-solid border w-full bg-white max-w-lg">
             <div className="flex flex-row items-center justify-between px-3 py-2">
                 <div className="flex flex-row items-center gap-2.5">
-                    <ProfileImage />
+                    <UserImage />
                     <p>User Name</p>
                 </div>
                 <Button className="text-xl hover:text-gray-600" icon={<HiOutlineDotsHorizontal/>}/>
