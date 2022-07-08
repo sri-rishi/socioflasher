@@ -1,5 +1,5 @@
 import { Button } from "../index";
-import {IoBookmarkOutline, GoHome, MdOutlineExplore, RiNotificationLine, IoMdSearch} from "../../assests/index"
+import {IoBookmarkOutline, GoHome, IoMdSearch, CgProfile} from "../../assests/index"
 
 export const Footer = () => {
     return (
@@ -7,7 +7,7 @@ export const Footer = () => {
             <Button className="hover:text-sky-400" icon={<GoHome />}/>
             <Button className="hover:text-sky-400" icon={<IoMdSearch />}/>
             <Button className="hover:text-sky-400" icon={<IoBookmarkOutline />}/>
-            <Button className="hover:text-sky-400" icon={<RiNotificationLine />} />
+            <Button className="hover:text-sky-400" icon={<CgProfile />} />
         </footer>
     )
 }

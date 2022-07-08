@@ -1,4 +1,4 @@
-import { GoHome, MdOutlineExplore, IoBookmarkOutline, RiNotificationLine,CgProfile, logo, GiFeather, IoMdSearch, FiLogOut} from "../../assests";
+import { GoHome, MdOutlineExplore, IoBookmarkOutline, CgProfile, logo, GiFeather, IoMdSearch, FiLogOut} from "../../assests";
 import { Button} from "../index";
 
 export const MenuBar = () => {
@@ -32,12 +32,6 @@ export const MenuBar = () => {
                     <li className="flex flex-row items-center p-4 gap-4 hover:text-sky-400 hover:bg-white hover:shadow-md rounded-full xl:rounded-2xl">
                         <IoBookmarkOutline className="text-2xl"/>
                         <span className="hidden xl:flex text-lg">Bookmarks</span>
-                    </li>
-                </a>
-                <a>
-                    <li className="flex flex-row items-center p-4 gap-4 hover:text-sky-400 hover:bg-white hover:shadow-md rounded-full xl:rounded-2xl">
-                        <RiNotificationLine className="text-2xl font-bold"/>
-                        <span className="hidden xl:flex text-lg">Notification</span>
                     </li>
                 </a>
                 <a>
