@@ -1,9 +1,10 @@
 import "./App.css";
+import { Feed } from "./pages/index";
 
 function App() {
   return (
-    <div className="App">
-      
+    <div className="App bg-slate-100">
+      <Feed />
     </div>
   );
 }
