@@ -15,7 +15,9 @@ export const Footer = () => {
                 <Button className="hover:text-sky-400" icon={<IoMdSearch />}/>
             </NavLink>
             <Button className="hover:text-sky-400" icon={<IoBookmarkOutline />}/>
-            <Button className="hover:text-sky-400" icon={<CgProfile />} />
+            <NavLink to="/userProfile" style={getActiveStyle}>
+                <Button className="hover:text-sky-400" icon={<CgProfile />} />
+            </NavLink>
         </footer>
     )
 }

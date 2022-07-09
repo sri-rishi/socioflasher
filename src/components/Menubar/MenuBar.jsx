@@ -42,12 +42,12 @@ export const MenuBar = () => {
                         <span className="hidden xl:flex text-lg">Bookmarks</span>
                     </li>
                 </a>
-                <a>
+                <NavLink to="/userProfile" style={getActiveStyle}>
                     <li className="flex flex-row items-center p-4 gap-4 hover:text-sky-400 hover:bg-white hover:shadow-md rounded-2xl">
                         <CgProfile className="text-2xl"/>
                         <span className="hidden xl:flex text-lg">Profile</span>
                     </li>
-                </a>
+                </NavLink>
                 <a>
                     <li className="flex flex-row items-center p-4 gap-4 hover:text-sky-400 hover:bg-white hover:shadow-md rounded-2xl">
                         <FiLogOut className="text-2xl"/>
