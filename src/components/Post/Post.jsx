@@ -3,7 +3,7 @@ import { RiHeart3Line, IoBookmarkOutline, GrEmoji} from "../../assests";
 
 export const Post = () => {
     return (
-        <div className="flex flex-col border-solid border w-full bg-white max-w-lg">
+        <div className="flex flex-col border-solid border w-full bg-white max-w-lg rounded">
             <div className="flex flex-row items-center px-3 py-2 gap-2.5">
                 <UserImage />
                 <p>User Name</p>

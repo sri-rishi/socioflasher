@@ -2,7 +2,7 @@ import { Button } from "../index";
 
 export const ProfileBox = () => {
     return (
-        <div className="flex flex-row justify-around w-full max-w-lg bg-white py-4">
+        <div className="flex flex-row justify-around w-full max-w-lg bg-white py-4 border rounded">
             <div className="w-36 h-36 p-4">
                 <img className="w-full rounded-full" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkg3YrRehU5lvlYruB90y6K6cF4eyTsMk2iZhcG0N28iHyXrG0_VvlFeBxjcq3rhyl-Po&usqp=CAU"} alt="user" />
             </div>
