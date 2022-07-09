@@ -1,15 +1,12 @@
-import { Button, ProfileImage } from "../index/index";
-import { HiOutlineDotsHorizontal, RiHeart3Line, TbMessageCircle2, IoBookmarkOutline, GrEmoji} from "../../assests";
+import { Button, UserImage } from "../index/index";
+import { RiHeart3Line, IoBookmarkOutline, GrEmoji} from "../../assests";
 
-export const FeedPost = () => {
+export const Post = () => {
     return (
-        <div className="flex flex-col border-solid border w-full bg-white max-w-lg">
-            <div className="flex flex-row items-center justify-between px-3 py-2">
-                <div className="flex flex-row items-center gap-2.5">
-                    <ProfileImage />
-                    <p>User Name</p>
-                </div>
-                <Button className="text-xl hover:text-gray-600" icon={<HiOutlineDotsHorizontal/>}/>
+        <div className="flex flex-col border-solid border w-full bg-white max-w-lg rounded">
+            <div className="flex flex-row items-center px-3 py-2 gap-2.5">
+                <UserImage />
+                <p>User Name</p>
             </div>
             <div className="w-full">
                 <img className="w-full object-cover max-h-96" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="feed-cover" />
@@ -17,9 +14,9 @@ export const FeedPost = () => {
             <div className="flex flex-row justify-between items-center p-3 text-xl">
                 <div className="flex gap-8 flex-row items-center">
                     <Button className={"hover:text-gray-600"} icon={<RiHeart3Line />} />
-                    <Button className={"hover:text-gray-600"} icon={<TbMessageCircle2 />} />
+                    <Button className={"hover:text-gray-600"} icon={<IoBookmarkOutline className="font-extrabold "/>}/>
                 </div>
-                <Button icon={<IoBookmarkOutline className="font-extrabold hover:text-gray-600" />}/>
+                
             </div>
             <div className="flex flex-col gap-4 px-3">
                 <div className="text-left flex flex-col gap-2">
