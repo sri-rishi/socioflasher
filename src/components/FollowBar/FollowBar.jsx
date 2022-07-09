@@ -2,7 +2,7 @@ import { Button, UserImage, SearchBox } from "../index/index";
 
 export const FollowBar = () => {
     return (
-        <div className="hidden w-1/4 lg:flex flex-col gap-8 w-full fixed top-0 right-0 items-start p-4 xl:px-8">
+        <div className="hidden w-1/4 lg:flex flex-col gap-8 fixed top-0 right-0 items-start p-4 xl:px-8">
                 <div className="w-full flex flex-col items-center gap-4">
                     <SearchBox />
                     
