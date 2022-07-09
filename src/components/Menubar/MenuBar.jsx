@@ -25,23 +25,23 @@ export const MenuBar = () => {
                         <span className="hidden xl:flex text-lg">Home</span>
                     </li>
                 </NavLink> 
-                <a>
+                <NavLink to="/explore" style={getActiveStyle}>
                     <li className="flex flex-row items-center p-4 hover:bg-white hover:text-sky-400 hover:shadow-md xl:hidden rounded-2xl">
                         <IoMdSearch className="text-2xl"/>
                     </li>
-                </a>
-                <a>
+                </NavLink>
+                <NavLink to="/explore" style={getActiveStyle}>
                     <li className="hidden xl:flex flex-row items-center gap-4 p-4 hover:text-sky-400 hover:bg-white hover:shadow-md rounded-2xl">
                         <MdOutlineExplore className="text-2xl"/>
                         <span className="hidden xl:flex text-lg">Explore</span>
                     </li>
-                </a>
-                <a>
+                </NavLink>
+                <NavLink to="/bookmarks" style={getActiveStyle}>
                     <li className="flex flex-row items-center p-4 gap-4 hover:text-sky-400 hover:bg-white hover:shadow-md rounded-2xl">
                         <IoBookmarkOutline className="text-2xl"/>
                         <span className="hidden xl:flex text-lg">Bookmarks</span>
                     </li>
-                </a>
+                </NavLink>
                 <NavLink to="/userProfile" style={getActiveStyle}>
                     <li className="flex flex-row items-center p-4 gap-4 hover:text-sky-400 hover:bg-white hover:shadow-md rounded-2xl">
                         <CgProfile className="text-2xl"/>
