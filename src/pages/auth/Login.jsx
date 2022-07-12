@@ -1,11 +1,11 @@
 import { Button } from "../../components/index";
 import { useSelector, useDispatch } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { loginUser } from "./authSlice";
 import { NavLink, useNavigate } from "react-router-dom";
 
 export const Login = () => {
-    const {user, token} = useSelector(store => store?.auth);
+    const {token} = useSelector(store => store?.auth);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [loginDetails, setLoginDetails] = useState({
@@ -17,10 +17,6 @@ export const Login = () => {
         if(loginDetails.email !== "" && loginDetails.password !== "") {
             dispatch(loginUser(loginDetails))
         }
-
-        if(token) {
-            navigate("/")
-        }
     };
 
     const testLoginHandler = () => {
@@ -30,6 +26,9 @@ export const Login = () => {
         })
     }
 
+    useEffect(() => 
+        token && navigate("/")
+    ,[token])
     
     return (
         <div className="w-full h-screen flex flex-row justify-center items-center">

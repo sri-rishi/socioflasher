@@ -1,11 +1,11 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { NavLink, useNavigate } from "react-router-dom"
 import { Button } from "../../components/index"
 import { signupUser } from "./authSlice"
 
 export const SignUp = () => {
-    const {user, token} = useSelector(store => store?.auth)
+    const {token} = useSelector(store => store?.auth)
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [signupDetails, setSignupDetails] = useState({
@@ -25,11 +25,9 @@ export const SignUp = () => {
         ) {
             dispatch(signupUser(signupDetails));
         }
-
-        if(token) {
-            navigate("/")
-        }
     }
+
+    useEffect(() => token && navigate("/"), [token])
     return (
         <div className="w-full h-screen flex flex-row justify-center items-center">
             <div className="w-full max-w-sm flex flex-col items-center bg-white shadow-md p-8 rounded-2xl gap-4 font-semibold border-y-8 border-sky-700">
