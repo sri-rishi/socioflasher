@@ -1,1 +1,1 @@
-export { Template } from "./TemplateRoute/Template";
+export {AllRoutes} from "./AllRoutes/Routes";
