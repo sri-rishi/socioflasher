@@ -1,8 +1,8 @@
 import { Button } from "../../components/index";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { loginUser } from "./authSlice";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export const Login = () => {
     const {user, token} = useSelector(store => store?.auth);
@@ -77,7 +77,12 @@ export const Login = () => {
                         text={"Sign In with test"}
                         onClick={() => testLoginHandler()}
                     />
-                    <Button className={"bg-white p-2 rounded-2xl text-gray-400 border-2 hover:bg-sky-600 hover:text-white hover:border-transparent"} text={"Create new account"}/>
+                    <NavLink to="/signup">
+                        <Button 
+                            className={"w-full bg-white p-2 rounded-2xl text-gray-400 border-2 hover:bg-sky-600 hover:text-white hover:border-transparent"} 
+                            text={"Create new account"}
+                        />
+                    </NavLink>
                 </div>
             </div>
         </div>
