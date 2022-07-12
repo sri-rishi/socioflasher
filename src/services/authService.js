@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const loginUserService = (email, password) => {
+export const loginUserService = (email, password) => {
     return axios.post(
         "/api/auth/login", 
         {
@@ -9,5 +9,14 @@ const loginUserService = (email, password) => {
         })
 }
 
-
-export {loginUserService}
+export const signupUserService = (firstName, lastName, email, password) => {
+    return axios.post(
+        "/api/auth/signup",
+        {
+            firstName: firstName,
+            lastName: lastName,
+            username: email,
+            password: password
+        }
+    )
+}
