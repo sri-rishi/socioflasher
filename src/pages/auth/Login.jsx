@@ -23,6 +23,12 @@ export const Login = () => {
         }
     };
 
+    const testLoginHandler = () => {
+        setLoginDetails({
+            email: "rishi@gmail.com",
+            password: "rishi@123"
+        })
+    }
 
     
     return (
@@ -66,7 +72,11 @@ export const Login = () => {
                         text={"Sign In"}
                         onClick={() => loginHandler()}
                     />
-                    <Button className={"bg-white p-2 border-sky-600 rounded-2xl text-sky-600 hover:bg-sky-900"} text={"Sign In with test"}/>
+                    <Button 
+                        className={"bg-white p-2 border-sky-600 rounded-2xl text-sky-600 hover:bg-sky-900"} 
+                        text={"Sign In with test"}
+                        onClick={() => testLoginHandler()}
+                    />
                     <Button className={"bg-white p-2 rounded-2xl text-gray-400 border-2 hover:bg-sky-600 hover:text-white hover:border-transparent"} text={"Create new account"}/>
                 </div>
             </div>
