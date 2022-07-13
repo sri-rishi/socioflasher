@@ -8,6 +8,20 @@ import { formatDate } from "../utils/authUtils";
 export const users = [
   {
     _id: uuid(),
+    firstName: "Rishi",
+    lastName: "Srivastava",
+    username: "rishi@gmail.com",
+    userHandler: "rishi_sri",
+    password: "rishi@123",
+    bio: "An aspiring web developer",
+    link: "https://sririshiport.netlify.app/",
+    profilePic:
+      "https://st2.depositphotos.com/1006318/8387/v/450/depositphotos_83873314-stock-illustration-male-hispanic-avatar-portrait.jpg",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
     firstName: "Adarsh",
     lastName: "Balika",
     username: "balika@gmail.com",

@@ -5,7 +5,8 @@ import {IoBookmarkOutline, GoHome, IoMdSearch, CgProfile} from "../../assests/in
 export const Footer = () => {
     const getActiveStyle = ({isActive}) => ({
         color: isActive && "rgb(56 189 248)"
-    })
+    });
+    
     return (
         <footer className="bottom-0 fixed shadow-top bg-white flex flex-row w-full justify-around py-5 px-4 text-2xl md:hidden">
             <NavLink to="/" style={getActiveStyle}>
