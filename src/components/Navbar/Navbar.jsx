@@ -1,14 +1,15 @@
 import { Button, UserImage } from "../index";
 import {FiLogOut} from "../../assests"
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../features/auth/authSlice";
 
 export const Navbar = () => {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    const {user} = useSelector(store => store?.auth);
     return(
         <nav className="w-full flex flex-row items-center justify-between py-3 px-4 bg-white fixed z-50 top-0 shadow md:hidden">
             <div className="flex flex-row items-center gap-4">
-                <UserImage />
+                <UserImage imgSrc={user.profilePic} alt={user.firstName}/>
                 <h1 className="text-2xl font-semibold">socio<span className="text-sky-400">Flasher</span></h1>
             </div>
             <Button 
