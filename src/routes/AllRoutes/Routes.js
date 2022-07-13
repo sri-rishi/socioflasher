@@ -1,5 +1,5 @@
 import {Routes, Route} from "react-router-dom";
-import { BookMarks, Explore, Feed, UserProfilePage, Login, SignUp} from "../../pages/index/index";
+import { BookMarks, Explore, Feed, UserProfilePage, Login, SignUp} from "../../features/index/index";
 import { AuthRequiresRoutes } from "../AuthRequires/AuthRquiresRoutes";
 import { Template } from "../TemplateRoute/Template";
 

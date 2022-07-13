@@ -1,7 +1,7 @@
 import { Button, UserImage } from "../index";
 import {FiLogOut} from "../../assests"
 import { useDispatch } from "react-redux";
-import { logoutUser } from "../../pages/auth/authSlice";
+import { logoutUser } from "../../features/auth/authSlice";
 
 export const Navbar = () => {
     const dispatch = useDispatch()

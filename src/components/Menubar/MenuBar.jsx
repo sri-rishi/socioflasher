@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import {NavLink} from "react-router-dom"
 import { GoHome, MdOutlineExplore, IoBookmarkOutline, CgProfile, logo, GiFeather, IoMdSearch, FiLogOut} from "../../assests";
 import { Button} from "../index";
-import { logoutUser } from "../../pages/auth/authSlice";
+import { logoutUser } from "../../features/auth/authSlice";
 
 export const MenuBar = () => {
 
