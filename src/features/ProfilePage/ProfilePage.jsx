@@ -1,6 +1,6 @@
-import { Post, ProfileBox } from "../../components/index"
+import { Post, ProfileBox } from "../../components/index/index"
 
-export const UserProfilePage = () => {
+export const ProfilePage = () => {
     return (
         <>
             <ProfileBox />
