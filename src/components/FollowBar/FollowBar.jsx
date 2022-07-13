@@ -28,9 +28,10 @@ export const FollowBar = () => {
                                         <div className="flex flex-row items-center gap-2">
                                             <UserImage 
                                                 imgSrc={
-                                                    profilePic ? 
-                                                    profilePic : 
-                                                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Xdf9OyXn9BpWL30gb6cpyLnkiCCbSaH8wVB1007o9WpYBDgb6J1_afDQTdJuqwgE3xM&usqp=CAU"
+                                                    profilePic && profilePic
+                                                }
+                                                alt={
+                                                    firstName && firstName
                                                 }
                                             />
                                             <p className="font-semibold text-sm">{`${firstName} ${lastName}`}</p>
