@@ -27,7 +27,7 @@ const usersSlice = createSlice({
         [getUsers.rejected]: (state, action) => {
             state.usersStatus = "error";
             state.error = action.payload;
-        }
+        },
     }
 })
 

@@ -1,4 +1,3 @@
-import { GiBiohazard } from "react-icons/gi";
 import { Button } from "../index";
 
 export const ProfileBox = ({

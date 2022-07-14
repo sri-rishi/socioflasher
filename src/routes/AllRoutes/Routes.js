@@ -27,7 +27,7 @@ export const AllRoutes = () => {
                     </Template>
                 </AuthRequiresRoutes>
             } />
-            <Route path="/userProfile" element={
+            <Route path="/profile" element={
                 <AuthRequiresRoutes>
                     <Template>
                         <ProfilePage />
