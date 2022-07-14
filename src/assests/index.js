@@ -8,10 +8,12 @@ export {
     RiHeart3Line,
     TbMessageCircle2,
     TbSend,
+    TbCameraPlus,
     GrEmoji,
     GiFeather,
     FiLogOut,
-    RiNotificationLine
+    RiNotificationLine,
+    FaTimes
 } from "./icons";
 
 export {
