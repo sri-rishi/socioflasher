@@ -1,10 +1,12 @@
 import { EditProfileModal, Post, ProfileBox } from "../../components/index/index";
-import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useSelector} from "react-redux";
+import {  useState } from "react";
+
 
 export const ProfilePage = () => {
     const {user} = useSelector(store => store?.auth);
-    const [showEditProfile, setShowEditProfile] = useState(false)
+    const [showEditProfile, setShowEditProfile] = useState(false);
+
 
     return (
         <>

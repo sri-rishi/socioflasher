@@ -1,5 +1,5 @@
 import { Button } from "../index";
-import { useSelector } from "react-redux";
+import { useSelector} from "react-redux";
 
 export const ProfileBox = ({
     id,
