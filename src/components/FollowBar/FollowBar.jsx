@@ -1,6 +1,6 @@
 import { Button, UserImage, SearchBox } from "../index/index";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const FollowBar = () => {
     const {users} = useSelector(store => store?.users);
@@ -34,7 +34,9 @@ export const FollowBar = () => {
                                                     firstName && firstName
                                                 }
                                             />
-                                            <p className="font-semibold text-sm">{`${firstName} ${lastName}`}</p>
+                                            <Link to={`/userProfile/${_id}`}>
+                                                <p className="font-semibold text-sm">{`${firstName} ${lastName}`}</p>
+                                            </Link>
                                         </div>
                                         <Button className="bg-sky-600 py-1 px-3 rounded-2xl text-white hover:bg-sky-700" text={"Follow"}/>
                                     </div>
