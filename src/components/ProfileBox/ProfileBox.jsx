@@ -8,7 +8,8 @@ export const ProfileBox = ({
     lastName,
     userHandler,
     bio,
-    link
+    link,
+    setShowEditProfile
 }) => {
 
     const {user} = useSelector(store => store?.auth);
@@ -26,7 +27,11 @@ export const ProfileBox = ({
                     </div>
                     {
                         id === user._id ? 
-                        <Button className={"bg-slate-700 px-4 py-1.5 text-white rounded hover:bg-slate-800"} text={"Edit"}/>
+                        <Button 
+                            className={"bg-slate-700 px-4 py-1.5 text-white rounded hover:bg-slate-800"} 
+                            text={"Edit"}
+                            onClick={() => setShowEditProfile(true)}
+                        />
                         : 
                         <Button className="bg-sky-600 py-1 px-3 rounded-2xl text-white hover:bg-sky-700" text={"Follow"}/>
                     }
