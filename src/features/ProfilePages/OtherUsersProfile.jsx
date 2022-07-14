@@ -13,6 +13,7 @@ export const OtherUsersProfile = () => {
     return (
         <>
             <ProfileBox 
+                id={otherUser?._id}
                 imgSrc={otherUser?.profilePic} 
                 firstName={otherUser?.firstName} 
                 lastName={otherUser?.lastName}

@@ -1,6 +1,8 @@
 import { Button } from "../index";
+import { useSelector } from "react-redux";
 
 export const ProfileBox = ({
+    id,
     imgSrc, 
     firstName,
     lastName,
@@ -8,6 +10,9 @@ export const ProfileBox = ({
     bio,
     link
 }) => {
+
+    const {user} = useSelector(store => store?.auth);
+
     return (
         <div className="flex flex-row justify-evenly w-full max-w-lg bg-white py-4 border rounded">
             <div className="w-36 h-36 p-2">
@@ -19,7 +24,12 @@ export const ProfileBox = ({
                         <p className="font-bold text-xl">{`${firstName} ${lastName}`}</p>
                         <p className="text-gray-400">{`@${userHandler}`}</p>
                     </div>
-                    <Button className={"bg-slate-700 px-4 py-1.5 text-white rounded hover:bg-slate-800"} text={"Edit"}/>
+                    {
+                        id === user._id ? 
+                        <Button className={"bg-slate-700 px-4 py-1.5 text-white rounded hover:bg-slate-800"} text={"Edit"}/>
+                        : 
+                        <Button className="bg-sky-600 py-1 px-3 rounded-2xl text-white hover:bg-sky-700" text={"Follow"}/>
+                    }
                 </div>
                 <p className="text-gray-700 font-medium">
                     {bio}

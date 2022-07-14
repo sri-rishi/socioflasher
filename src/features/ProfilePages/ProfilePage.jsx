@@ -7,12 +7,13 @@ export const ProfilePage = () => {
     return (
         <>
             <ProfileBox 
-                imgSrc={user.profilePic} 
-                firstName={user.firstName} 
-                lastName={user.lastName}
-                userHandler={user.userHandler}
-                bio={user.bio}
-                link={user.link}
+                id={user?._id}
+                imgSrc={user?.profilePic} 
+                firstName={user?.firstName} 
+                lastName={user?.lastName}
+                userHandler={user?.userHandler}
+                bio={user?.bio}
+                link={user?.link}
             />
             <div className="w-full flex flex-col items-center gap-4">
                 <Post />
