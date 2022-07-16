@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { getUsers } from "./features/ProfilePages/userSlice";
 import { AllRoutes } from "./routes/AllRoutes/Routes";
 import {useDispatch, useSelector} from "react-redux";
+import { getAllPosts } from "./features/feed/postSlice";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   useEffect(() => {
     if(token) {
       dispatch(getUsers());
+      dispatch(getAllPosts());
     }
   }, [token])
 
