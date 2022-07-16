@@ -33,6 +33,7 @@ export const FollowBar = () => {
                                                 alt={
                                                     firstName && firstName
                                                 }
+                                                width={"w-10"}
                                             />
                                             <Link to={`/userProfile/${_id}`}>
                                                 <p className="font-semibold text-sm">{`${firstName} ${lastName}`}</p>
