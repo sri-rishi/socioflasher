@@ -1,4 +1,4 @@
-import { Button, UserImage } from "../index/index";
+import { Button, EditPostModal, UserImage } from "../index/index";
 import { RiHeart3Line, IoBookmarkOutline, BsThreeDots} from "../../assests";
 import { useSelector } from "react-redux";
 import { useState } from "react";
@@ -6,20 +6,26 @@ import { useState } from "react";
 export const Post = ({post}) => {
     const {
         _id,
-    username,
-    content,
-    media,
-    comments,
-    likes: {likeCount, likedBy, dislikedBy},
-    createdAt,
-    bookmark
+        username,
+        content,
+        media,
+        comments,
+        likes: {likeCount, likedBy, dislikedBy},
+        createdAt,
+        bookmark
     } = post
 
     const {users} = useSelector(store => store?.users);
     const {user} = useSelector(store => store?.auth);
     const [showFullContent, setShowFullContent] = useState(false);
     const userDetails = users?.find(person => person.username === username);
-    const [showPostMenu, setShowPostMenu] = useState(false)
+    const [showPostMenu, setShowPostMenu] = useState(false);
+    const [showEditPost, setShowEditPost] = useState(false);
+
+    const editMenuHandler = () => {
+        setShowEditPost(dispaly => !dispaly);
+        setShowPostMenu(dispaly => !dispaly);
+    }  
     
     return (
         <div className="flex flex-col border-solid border w-full gap-4 bg-white max-w-xl rounded py-4">
@@ -44,16 +50,22 @@ export const Post = ({post}) => {
                             onClick={() => setShowPostMenu(dispaly => !dispaly)}
                         />
                         <ul className={`${showPostMenu ? "flex" : "hidden"} flex-col items-center absolute top-full right-4 font-semibold text-gray-500 bg-white border border-gray-400`}>
-                            <li className="px-4 py-2 border-b border-gray-400 hover:text-gray-700 hover:cursor-pointer">
+                            <li 
+                                className="px-4 py-2 border-b border-gray-400 hover:text-gray-700 hover:cursor-pointer"
+                                onClick={() => editMenuHandler()}
+                            >
                                 Edit 
                             </li>
-                            <li className="px-4 py-2 hover:text-gray-700 hover:cursor-pointer">
+                            <li className="px-4 py-2 text-red-600 hover:cursor-pointer">
                                 Delete
                             </li>
                         </ul>
                     </div>
                     : <></>
                 }
+                <div className={`${showEditPost ? "flex" : "hidden"} w-full flex-row items-center justify-center fixed inset-0 z-40 bg-gray-50 bg-opacity-50`}>
+                    <EditPostModal setShowEditPost={setShowEditPost} post={post}/>
+                </div>
             </div>
             <div className="flex flex-col gap-4 px-3">
                 {
