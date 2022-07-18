@@ -1,38 +1,91 @@
 import { Button, UserImage } from "../index/index";
-import { RiHeart3Line, IoBookmarkOutline, GrEmoji} from "../../assests";
+import { RiHeart3Line, IoBookmarkOutline, BsThreeDots} from "../../assests";
+import { useSelector } from "react-redux";
+import { useState } from "react";
 
-export const Post = () => {
+export const Post = ({post}) => {
+    const {
+        _id,
+    username,
+    content,
+    media,
+    comments,
+    likes: {likeCount, likedBy, dislikedBy},
+    createdAt,
+    bookmark
+    } = post
+
+    const {users} = useSelector(store => store?.users);
+    const {user} = useSelector(store => store?.auth);
+    const [showFullContent, setShowFullContent] = useState(false);
+    const userDetails = users?.find(person => person.username === username);
+    const [showPostMenu, setShowPostMenu] = useState(false)
+    
     return (
-        <div className="flex flex-col border-solid border w-full bg-white max-w-lg rounded">
-            <div className="flex flex-row items-center px-3 py-2 gap-2.5">
-                <UserImage />
-                <p>User Name</p>
-            </div>
-            <div className="w-full">
-                <img className="w-full object-cover max-h-96" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="feed-cover" />
-            </div>
-            <div className="flex flex-row justify-between items-center p-3 text-xl">
-                <div className="flex gap-8 flex-row items-center">
-                    <Button className={"hover:text-gray-600"} icon={<RiHeart3Line />} />
-                    <Button className={"hover:text-gray-600"} icon={<IoBookmarkOutline className="font-extrabold "/>}/>
+        <div className="flex flex-col border-solid border w-full gap-4 bg-white max-w-xl rounded py-4">
+            <div className="flex flex-row items-center justify-between px-3">
+                <div className="flex flex-row items-center gap-2.5">
+                    <UserImage imgSrc={userDetails?.profilePic} width={"w-14"}/>
+                    <div className="flex flex-col">
+                        <div className="flex flex-row items-center gap-1.5">
+                            <p className="text-lg font-medium">{`${userDetails?.firstName} ${userDetails.lastName}`}</p>
+                            <p className="font-medium text-gray-400">@{userDetails?.userHandler}</p>
+                        </div>
+                        <small className="text-gray-600">1m ago</small>
+                    </div>
                 </div>
                 
+                {
+                    userDetails.username === user.username ? 
+                    <div className="relative">
+                        <Button 
+                            className={"rounded-full p-2 text-xl text-gray-400 hover:bg-gray-400 hover:text-white"} 
+                            icon={<BsThreeDots />}
+                            onClick={() => setShowPostMenu(dispaly => !dispaly)}
+                        />
+                        <ul className={`${showPostMenu ? "flex" : "hidden"} flex-col items-center absolute top-full right-4 font-semibold text-gray-500 bg-white border border-gray-400`}>
+                            <li className="px-4 py-2 border-b border-gray-400 hover:text-gray-700 hover:cursor-pointer">
+                                Edit 
+                            </li>
+                            <li className="px-4 py-2 hover:text-gray-700 hover:cursor-pointer">
+                                Delete
+                            </li>
+                        </ul>
+                    </div>
+                    : <></>
+                }
             </div>
             <div className="flex flex-col gap-4 px-3">
-                <div className="text-left flex flex-col gap-2">
-                    <p className="text-ellipsis overflow-hidden whitespace-nowrap">
-                        <strong className="mr-2">User Name</strong> 
-                        <span>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi excepturi repellat sunt eius aspernatur autem! Assumenda, aliquam corporis sunt pariatur voluptatibus placeat cumque dolorum enim eos nulla adipisci rerum ipsum.
+                {
+                    media ?
+                    <div className="w-full px-8 py-4">
+                        <img className="w-full object-cover" src={media} alt="feed cover" />
+                    </div>
+                    : <></>
+                }
+                <div className="text-left flex flex-col gap-2 px-3">
+                    {
+                        !showFullContent && content.length > 250?
+                        <p>
+                            {[...content].slice(0, 250)}... 
+                        </p>
+                        : content 
+                    }
+                    {
+                        content.length > 250 &&
+                        <span 
+                            className="text-gray-400 hover:cursor-pointer" 
+                            onClick={() => setShowFullContent(fullContent => !fullContent)}
+                        >
+                            {showFullContent ? "Show less": "Show more"}
                         </span>
-                    </p>
-                    <p className="text-gray-600">View all comments</p>
-                    <small className="text-gray-600">1m ago</small>
+                    }
                 </div>
-                <div className="flex flex-row w-full items-center gap-2 pb-4 text-base">
-                    <Button className="text-xl font-extrabold hover:text-gray-600" icon={<GrEmoji />}/>
-                    <input className="w-full outline-transparent" placeholder="Add comments"/>
-                    <Button className="text-sky-600 font-semibold hover:text-sky-900" text={"Post"}/>
+                <div className="flex flex-row justify-between items-center p-3 text-xl">
+                    <div className="flex gap-8 flex-row items-center">
+                        <Button className={"hover:text-gray-600"} icon={<RiHeart3Line />} />
+                        <Button className={"hover:text-gray-600"} icon={<IoBookmarkOutline className="font-extrabold "/>}/>
+                    </div>
                 </div>
             </div>
         </div>
