@@ -15,3 +15,12 @@ export const editPostData = (postData, token) => {
         }
     )
 }
+
+export const deletePostFromData = (token, postId) => {
+    return axios.delete(
+        `/api/posts/${postId}`,
+        {
+            headers: {authorization: token}
+        }
+    )
+}
