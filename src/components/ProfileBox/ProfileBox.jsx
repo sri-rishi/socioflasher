@@ -15,7 +15,7 @@ export const ProfileBox = ({
     const {user} = useSelector(store => store?.auth);
 
     return (
-        <div className="flex flex-row justify-evenly w-full max-w-lg bg-white py-4 border rounded">
+        <div className="flex flex-row justify-evenly w-full max-w-xl bg-white py-4 border rounded">
             <div className="w-36 h-36 p-2">
                 <img className="w-full rounded-full" src={imgSrc && imgSrc} alt={`${firstName} pic`} />
             </div>
