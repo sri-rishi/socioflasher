@@ -11,3 +11,4 @@ export {Header} from "../Header/Header";
 export {Post} from "../Post/Post";
 export {ProfileBox} from "../ProfileBox/ProfileBox";
 export {EditProfileModal} from "../EditProfileModal/EditProfileModal";
+export {EditPostModal} from "../EditPostModal/EditPostModal";
