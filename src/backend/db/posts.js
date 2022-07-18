@@ -449,4 +449,21 @@ export const posts = [
       },
     ],
   },
+  {
+    _id: uuid(),
+    content:
+      "What did you spend your first paycheck on?",
+    likes: {
+      likeCount: 0,
+      likedBy: [],
+      dislikedBy: [],
+    },
+    username: "aman@gmail.com",
+    bookmark: [],
+    createdAt: "2021-05-23T10:38:12+05:30",
+    updatedAt: formatDate(),
+    comments: [
+      
+    ],
+  },
 ];
