@@ -1,6 +1,6 @@
-export const UserImage = ({imgSrc, alt}) => {
+export const UserImage = ({imgSrc, alt, width}) => {
     return (
-        <div className="w-10">
+        <div className={width}>
             <img 
                 className="w-full rounded-full object-cover" 
                 src={
