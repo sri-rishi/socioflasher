@@ -1,7 +1,8 @@
 import { Button, EditPostModal, UserImage } from "../index/index";
 import { RiHeart3Line, IoBookmarkOutline, BsThreeDots} from "../../assests";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
+import { deletePost } from "../../features/feed/postSlice";
 
 export const Post = ({post}) => {
     const {
@@ -18,9 +19,11 @@ export const Post = ({post}) => {
     const {users} = useSelector(store => store?.users);
     const {user} = useSelector(store => store?.auth);
     const [showFullContent, setShowFullContent] = useState(false);
-    const userDetails = users?.find(person => person.username === username);
     const [showPostMenu, setShowPostMenu] = useState(false);
     const [showEditPost, setShowEditPost] = useState(false);
+    const dispatch = useDispatch();
+
+    const userDetails = users?.find(person => person.username === username);
 
     const editMenuHandler = () => {
         setShowEditPost(dispaly => !dispaly);
@@ -56,14 +59,19 @@ export const Post = ({post}) => {
                             >
                                 Edit 
                             </li>
-                            <li className="px-4 py-2 text-red-600 hover:cursor-pointer">
+                            <li 
+                                className="px-4 py-2 text-red-600 hover:cursor-pointer"
+                                onClick={() => dispatch(deletePost(_id))}
+                            >
                                 Delete
                             </li>
                         </ul>
                     </div>
                     : <></>
                 }
-                <div className={`${showEditPost ? "flex" : "hidden"} w-full flex-row items-center justify-center fixed inset-0 z-40 bg-gray-50 bg-opacity-50`}>
+                <div 
+                    className={`${showEditPost ? "flex" : "hidden"} w-full flex-row items-center justify-center fixed inset-0 z-40 bg-gray-50 bg-opacity-50`}
+                >
                     <EditPostModal setShowEditPost={setShowEditPost} post={post}/>
                 </div>
             </div>
