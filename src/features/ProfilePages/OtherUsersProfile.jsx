@@ -5,10 +5,11 @@ import { useSelector } from "react-redux";
 export const OtherUsersProfile = () => {
     const {userId} = useParams();
     const {users} = useSelector(store => store?.users);
+    const {allPosts} = useSelector(store => store?.post);
 
-    const otherUser = users.find(person => person._id === userId);
+    const otherUser = users?.find(person => person._id === userId);
 
-    console.log(otherUser);
+    const otherUserPost = allPosts?.filter(post => post.username === otherUser.username);
 
     return (
         <>
@@ -22,9 +23,12 @@ export const OtherUsersProfile = () => {
                 link={otherUser?.link}
             />
             <div className="w-full flex flex-col items-center gap-4">
-                <Post />
-                <Post />
-                <Post />
+                {
+                    otherUserPost.length !== 0 ?
+                    otherUserPost.map((post) => (
+                        <Post key={post._id} post={post}/>
+                    )) :<></>
+                }
             </div>
         </>
     )
