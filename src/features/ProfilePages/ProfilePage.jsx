@@ -5,8 +5,10 @@ import {  useState } from "react";
 
 export const ProfilePage = () => {
     const {user} = useSelector(store => store?.auth);
+    const {allPosts} = useSelector(store => store?.post);
     const [showEditProfile, setShowEditProfile] = useState(false);
 
+    const userPost = allPosts?.filter(post => post.username === user.username);
 
     return (
         <>
@@ -21,9 +23,13 @@ export const ProfilePage = () => {
                 setShowEditProfile={setShowEditProfile}
             />
             <div className="w-full flex flex-col items-center gap-4">
-                <Post />
-                <Post />
-                <Post />
+                {
+                    userPost.length !== 0 ?
+                    userPost.map((post) => (
+                        <Post key={post._id} post={post}/>
+                    ))
+                    : <></>
+                }
             </div>
             <div className={`${showEditProfile ? "flex": "hidden" } w-full flex-row items-center justify-center fixed inset-0 z-40 bg-gray-50 bg-opacity-50`}>
                 <EditProfileModal setShowEditProfile={setShowEditProfile}/>
