@@ -13,7 +13,8 @@ export {
     GiFeather,
     FiLogOut,
     RiNotificationLine,
-    FaTimes
+    FaTimes,
+    BsThreeDots
 } from "./icons";
 
 export {
