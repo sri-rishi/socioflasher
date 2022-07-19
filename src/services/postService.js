@@ -24,3 +24,9 @@ export const deletePostFromData = (token, postId) => {
         }
     )
 }
+
+export const getSinglePostData = (postId) => {
+    return axios.get(
+        `/api/posts/${postId}`
+    )
+}
