@@ -1,8 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { deletePostFromData, editPostData, getAllPostsData } from "../../services/postService";
+import { deletePostFromData, editPostData, getAllPostsData, getSinglePostData } from "../../services/postService";
 
 const initialState = {
-    allPosts: []
+    allPosts: [],
+    singlePost: {}
 }
 
 export const getAllPosts = createAsyncThunk(
@@ -29,6 +30,14 @@ export const deletePost = createAsyncThunk(
         const response = await deletePostFromData(token, postId);
         return response.data;
     } 
+)
+
+export const getSinglePost = createAsyncThunk(
+    "post/getsinglePost",
+    async (postId) => {
+        const response = await getSinglePostData(postId);
+        return response.data;
+    }
 )
 
 const postSlice = createSlice({
@@ -65,6 +74,17 @@ const postSlice = createSlice({
             state.allPosts = action.payload.posts
         },
         [deletePost.rejected]: (state, action) => {
+            state.postStatus = "error";
+            state.error = action.payload;
+        },
+        [getSinglePost.pending]: (state) => {
+            state.postStatus = "pending";
+        },
+        [getSinglePost.fulfilled]: (state, action) => {
+            state.postStatus = "fulfilled";
+            state.singlePost = action.payload.post;
+        },
+        [getSinglePost.rejected]: (state, action) => {
             state.postStatus = "error";
             state.error = action.payload;
         }
