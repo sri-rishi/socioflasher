@@ -3,4 +3,5 @@ export {Explore} from "../explore/Explore";
 export {ProfilePage} from "../ProfilePages/ProfilePage";
 export {OtherUsersProfile} from "../ProfilePages/OtherUsersProfile";
 export {BookMarks} from "../bookmarks/BookMarks";
-export {Login, SignUp, } from "../auth";
+export {Login, SignUp} from "../auth";
+export {SinglePost} from "../singlePost/SinglePost";
