@@ -36,62 +36,65 @@ export const Post = ({post}) => {
     }, [_id])
     
     return (
-        <Link className="w-full items-center flex flex-col" to={`/post/${_id}`}>
-            <div className="flex flex-col border w-full gap-4 bg-white max-w-xl rounded py-4">
-                <div className="flex flex-row items-center justify-between px-3">
-                    <div className="flex flex-row items-center gap-2.5">
-                        <UserImage imgSrc={userDetails?.profilePic} width={"w-14"}/>
-                        <div className="flex flex-col">
-                            <Link 
-                                to={
-                                    userDetails?.username === user?.username ? 
-                                    "/profile" : 
-                                    `/userProfile/${userDetails._id}`
-                                }
-                            >
-                                <div className="flex flex-row items-center gap-1.5">
-                                    <p className="text-lg font-medium">{`${userDetails?.firstName} ${userDetails.lastName}`}</p>
-                                    <p className="font-medium text-gray-400">@{userDetails?.userHandler}</p>
-                                </div>
-                            </Link>
-                            <small className="text-gray-600">1m ago</small>
-                        </div>
-                    </div>
-                    
-                    {
-                        userDetails.username === user.username ? 
-                        <div className="relative">
-                            <Button 
-                                className={"rounded-full p-2 text-xl text-gray-400 hover:bg-gray-400 hover:text-white"} 
-                                icon={<BsThreeDots />}
-                                onClick={() => setShowPostMenu(dispaly => !dispaly)}
-                            />
-                            <ul className={`${showPostMenu ? "flex" : "hidden"} flex-col items-center absolute top-full right-4 font-semibold text-gray-500 bg-white border border-gray-400`}>
-                                <li 
-                                    className="px-4 py-2 border-b border-gray-400 hover:text-gray-700 hover:cursor-pointer"
-                                    onClick={() => editMenuHandler()}
-                                >
-                                    Edit 
-                                </li>
-                                <li 
-                                    className="px-4 py-2 text-red-600 hover:cursor-pointer"
-                                    onClick={() => dispatch(deletePost(_id))}
-                                >
-                                    Delete
-                                </li>
-                            </ul>
-                        </div>
-                        : <></>
-                    }
-                    <div 
-                        className={
-                            `${showEditPost ? "flex" : "hidden"} w-full flex-row items-center justify-center fixed inset-0 z-40 bg-gray-50 bg-opacity-50`
-                        }
-                    >
-                        <EditPostModal setShowEditPost={setShowEditPost} post={post}/>
+        <div className="flex flex-col border w-full gap-4 bg-white max-w-xl rounded py-4">
+            <div className="flex flex-row items-center justify-between px-3">
+                <div className="flex flex-row items-center gap-2.5">
+                    <UserImage imgSrc={userDetails?.profilePic} width={"w-14"}/>
+                    <div className="flex flex-col">
+                        <Link 
+                            to={
+                                userDetails?.username === user?.username ? 
+                                "/profile" : 
+                                `/userProfile/${userDetails._id}`
+                            }
+                        >
+                            <div className="flex flex-row items-center gap-1.5">
+                                <p className="text-lg font-medium">{`${userDetails?.firstName} ${userDetails.lastName}`}</p>
+                                <p className="font-medium text-gray-400">@{userDetails?.userHandler}</p>
+                            </div>
+                        </Link>
+                        <small className="text-gray-600">1m ago</small>
                     </div>
                 </div>
-                <div className="flex flex-col gap-4 px-3">
+                
+                {
+                    userDetails.username === user.username ? 
+                    <div className="relative">
+                        <Button 
+                            className={"rounded-full p-2 text-xl text-gray-400 hover:bg-gray-400 hover:text-white"} 
+                            icon={<BsThreeDots />}
+                            onClick={() => setShowPostMenu(dispaly => !dispaly)}
+                        />
+                        <ul 
+                            className={`${showPostMenu ? "flex" : "hidden"} flex-col items-center absolute top-full right-4 font-semibold text-gray-500 bg-white border border-gray-400`}
+                        >
+                            <li 
+                                className="px-4 py-2 border-b border-gray-400 hover:text-gray-700 hover:cursor-pointer"
+                                onClick={() => editMenuHandler()}
+                            >
+                                Edit 
+                            </li>
+                            <li 
+                                className="px-4 py-2 text-red-600 hover:cursor-pointer"
+                                onClick={() => dispatch(deletePost(_id))}
+                            >
+                                Delete
+                            </li>
+                        </ul>
+                    </div>
+                    : <></>
+                }
+                <div 
+                    className={
+                        `${showEditPost ? "flex" : "hidden"} w-full flex-row items-center justify-center fixed inset-0 z-40 bg-gray-50 bg-opacity-50`
+                    }
+                >
+                    <EditPostModal setShowEditPost={setShowEditPost} post={post}/>
+                </div>
+            </div>
+            
+            <div className="flex flex-col gap-4 px-3">
+                <Link className="w-full" to={`/post/${_id}`}>
                     {
                         media ?
                         <div className="w-full px-8 py-4">
@@ -117,21 +120,20 @@ export const Post = ({post}) => {
                             </span>
                         }
                     </div>
-                    
-                    <div className="flex flex-row items-center justify-around px-3">
-                        <div className="flex flex-row items-center gap-2">
-                            <Button className={"hover:text-gray-600 text-xl"} icon={<RiHeart3Line />}/>
-                            <p>{likeCount > 0 && likeCount}</p>
-                        </div>
-                        <Button className={"hover:text-gray-600 text-xl font-black"} icon={<IoBookmarkOutline />}/>
+                </Link>   
+                <div className="flex flex-row items-center justify-around px-3">
+                    <div className="flex flex-row items-center gap-2">
+                        <Button className={"hover:text-gray-600 text-xl"} icon={<RiHeart3Line />}/>
+                        <p>{likeCount > 0 && likeCount}</p>
+                    </div>
+                    <Button className={"hover:text-gray-600 text-xl font-black"} icon={<IoBookmarkOutline />}/>
 
-                        <div className="flex flex-row items-center gap-2">
-                            <Button className={"hover:text-gray-600 text-xl"} icon={<TbMessageCircle2 />} />
-                            <p>{comments.length > 0 && comments.length}</p>
-                        </div>
+                    <div className="flex flex-row items-center gap-2">
+                        <Button className={"hover:text-gray-600 text-xl"} icon={<TbMessageCircle2 />} />
+                        <p>{comments.length > 0 && comments.length}</p>
                     </div>
                 </div>
             </div>
-        </Link>
+        </div>
     )
 }
