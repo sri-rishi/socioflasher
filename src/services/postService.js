@@ -30,3 +30,16 @@ export const getSinglePostData = (postId) => {
         `/api/posts/${postId}`
     )
 }
+
+export const addNewPostInData = (postData, token) => {
+    return axios.post(
+        "/api/posts",
+        {
+            postData
+        },
+        {
+            headers: {authorization: token}
+        }
+    )
+}
+
