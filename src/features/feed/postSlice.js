@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { deletePostFromData, editPostData, getAllPostsData, getSinglePostData } from "../../services/postService";
+import { addNewPostInData, deletePostFromData, editPostData, getAllPostsData, getSinglePostData } from "../../services/postService";
 
 const initialState = {
     allPosts: [],
@@ -36,6 +36,15 @@ export const getSinglePost = createAsyncThunk(
     "post/getsinglePost",
     async (postId) => {
         const response = await getSinglePostData(postId);
+        return response.data;
+    }
+)
+
+export const addNewPost = createAsyncThunk(
+    "post/addNewPost",
+    async (postData) => {
+        const token = localStorage.getItem("token");
+        const response = await addNewPostInData(postData, token);
         return response.data;
     }
 )
@@ -85,6 +94,17 @@ const postSlice = createSlice({
             state.singlePost = action.payload.post;
         },
         [getSinglePost.rejected]: (state, action) => {
+            state.postStatus = "error";
+            state.error = action.payload;
+        }, 
+        [addNewPost.pending]: (state) => {
+            state.postStatus = "pending";
+        },
+        [addNewPost.fulfilled]: (state, action) => {
+            state.postStatus = "fulfilled";
+            state.allPosts = action.payload.posts;
+        },
+        [addNewPost.rejected]: (state, action) => {
             state.postStatus = "error";
             state.error = action.payload;
         }
