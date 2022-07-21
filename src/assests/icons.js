@@ -6,6 +6,8 @@ export {CgProfile} from "react-icons/cg";
 export {IoBookmarkOutline} from "react-icons/io5";
 export {GrEmoji} from "react-icons/gr";
 export {HiOutlineDotsHorizontal} from "react-icons/hi";
-export {TbSend,TbMessageCircle2} from "react-icons/tb";
+export {TbSend,TbMessageCircle2, TbCameraPlus} from "react-icons/tb";
 export {GiFeather} from "react-icons/gi";
-export {FiLogOut} from "react-icons/fi"
+export {FiLogOut} from "react-icons/fi";
+export {FaTimes} from "react-icons/fa";
+export {BsThreeDots} from "react-icons/bs";

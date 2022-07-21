@@ -18,7 +18,7 @@ export const Footer = () => {
             <NavLink to="/bookmarks" style={getActiveStyle}>
                 <Button className="hover:text-sky-400" icon={<IoBookmarkOutline />}/>
             </NavLink>
-            <NavLink to="/userProfile" style={getActiveStyle}>
+            <NavLink to="/profile" style={getActiveStyle}>
                 <Button className="hover:text-sky-400" icon={<CgProfile />} />
             </NavLink>
         </footer>

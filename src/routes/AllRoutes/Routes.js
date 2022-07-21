@@ -1,5 +1,5 @@
 import {Routes, Route} from "react-router-dom";
-import { BookMarks, Explore, Feed, UserProfilePage, Login, SignUp} from "../../features/index/index";
+import { BookMarks, Explore, Feed, ProfilePage, Login, SignUp, OtherUsersProfile, SinglePost} from "../../features/index/index";
 import { AuthRequiresRoutes } from "../AuthRequires/AuthRquiresRoutes";
 import { Template } from "../TemplateRoute/Template";
 
@@ -27,10 +27,24 @@ export const AllRoutes = () => {
                     </Template>
                 </AuthRequiresRoutes>
             } />
-            <Route path="/userProfile" element={
+            <Route path="/profile" element={
                 <AuthRequiresRoutes>
                     <Template>
-                        <UserProfilePage />
+                        <ProfilePage />
+                    </Template>
+                </AuthRequiresRoutes>
+            } />
+            <Route path="/userProfile/:userId" element={
+                <AuthRequiresRoutes>
+                    <Template>
+                        <OtherUsersProfile />
+                    </Template>
+                </AuthRequiresRoutes>
+            } />
+            <Route path="/post/:postId" element={
+                <AuthRequiresRoutes>
+                    <Template>
+                        <SinglePost />
                     </Template>
                 </AuthRequiresRoutes>
             } />
