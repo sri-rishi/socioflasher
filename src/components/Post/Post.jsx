@@ -1,8 +1,8 @@
 import { Button, EditPostModal, UserImage } from "../index/index";
 import { RiHeart3Line, IoBookmarkOutline, BsThreeDots, TbMessageCircle2} from "../../assests";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
-import { deletePost, getSinglePost } from "../../features/feed/postSlice";
+import { useState } from "react";
+import { deletePost} from "../../features/feed/postSlice";
 import { Link } from "react-router-dom";
 
 export const Post = ({post}) => {
@@ -30,10 +30,7 @@ export const Post = ({post}) => {
         setShowEditPost(dispaly => !dispaly);
         setShowPostMenu(dispaly => !dispaly);
     }  
-
-    useEffect(() => {
-        dispatch(getSinglePost(_id));
-    }, [_id])
+   
     
     return (
         <div className="flex flex-col border w-full gap-4 bg-white max-w-xl rounded py-4">
