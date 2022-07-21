@@ -12,3 +12,4 @@ export {Post} from "../Post/Post";
 export {ProfileBox} from "../ProfileBox/ProfileBox";
 export {EditProfileModal} from "../EditProfileModal/EditProfileModal";
 export {EditPostModal} from "../EditPostModal/EditPostModal";
+export {CommentBox} from "../comments/Comments";
