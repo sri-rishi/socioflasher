@@ -1,7 +1,7 @@
-import { Button, EditPostModal, UserImage } from "../index/index";
+import { Button, EditPostModal, UserImage, } from "../index/index";
 import { RiHeart3Line, IoBookmarkOutline, BsThreeDots, TbMessageCircle2} from "../../assests";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useState} from "react";
 import { deletePost} from "../../features/feed/postSlice";
 import { Link } from "react-router-dom";
 
@@ -30,7 +30,7 @@ export const Post = ({post}) => {
         setShowEditPost(dispaly => !dispaly);
         setShowPostMenu(dispaly => !dispaly);
     }  
-   
+
     
     return (
         <div className="flex flex-col border w-full gap-4 bg-white max-w-xl rounded py-4">
@@ -125,10 +125,12 @@ export const Post = ({post}) => {
                     </div>
                     <Button className={"hover:text-gray-600 text-xl font-black"} icon={<IoBookmarkOutline />}/>
 
-                    <div className="flex flex-row items-center gap-2">
-                        <Button className={"hover:text-gray-600 text-xl"} icon={<TbMessageCircle2 />} />
-                        <p>{comments.length > 0 && comments.length}</p>
-                    </div>
+                    <Link to={`/post/${_id}`}>
+                        <div className="flex flex-row items-center gap-2">
+                            <Button className={"hover:text-gray-600 text-xl"} icon={<TbMessageCircle2 />} />
+                            <p>{comments.length > 0 && comments.length}</p>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
