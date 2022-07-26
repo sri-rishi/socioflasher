@@ -14,7 +14,8 @@ export {
     FiLogOut,
     RiNotificationLine,
     FaTimes,
-    BsThreeDots
+    BsThreeDots, 
+    BsCheckLg
 } from "./icons";
 
 export {
