@@ -37,3 +37,22 @@ export const addNewPostInData = (postData, token) => {
     )
 }
 
+export const likePostCall = (postId, token) => {
+    return axios.post(
+        `/api/posts/like/${postId}`,
+        {},
+        {
+            headers: {authorization: token}
+        }
+    )
+}
+
+export const dislikePostCall = (postId, token) => {
+    return axios.post(
+        `/api/posts/dislike/${postId}`,
+        {},
+        {
+            headers: {authorization: token}
+        }
+    )
+}
