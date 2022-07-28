@@ -15,7 +15,8 @@ export {
     RiNotificationLine,
     FaTimes,
     BsThreeDots, 
-    BsCheckLg
+    BsCheckLg,
+    AiFillHeart
 } from "./icons";
 
 export {

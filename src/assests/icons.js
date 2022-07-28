@@ -11,3 +11,4 @@ export {GiFeather} from "react-icons/gi";
 export {FiLogOut} from "react-icons/fi";
 export {FaTimes} from "react-icons/fa";
 export {BsThreeDots, BsCheckLg} from "react-icons/bs";
+export {AiFillHeart} from "react-icons/ai";
