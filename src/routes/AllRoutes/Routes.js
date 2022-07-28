@@ -1,6 +1,7 @@
 import {Routes, Route} from "react-router-dom";
 import { BookMarks, Explore, Feed, ProfilePage, Login, SignUp, OtherUsersProfile, SinglePost} from "../../features/index/index";
 import { AuthRequiresRoutes } from "../AuthRequires/AuthRquiresRoutes";
+import MockAPI from "../Mockman/Mockman";
 import { Template } from "../TemplateRoute/Template";
 
 export const AllRoutes = () => {
@@ -50,6 +51,7 @@ export const AllRoutes = () => {
             } />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/mock-api" element={<MockAPI />} />
         </Routes>
     )
 }
