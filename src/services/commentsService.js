@@ -22,4 +22,13 @@ export const addCommentData = (commentData, postId, token) => {
             headers: {authorization: token}
         }
     )
+};
+
+export const deleteCommentOfPost = (postId, commentId, token) => {
+    return axios.delete(
+        `/api/comments/delete/${postId}/${commentId}`,
+        {
+            headers: {authorization: token}
+        }
+    )
 }
