@@ -76,7 +76,7 @@ export const CommentBox = ({comment, postId}) => {
                                 Edit 
                             </li>
                             <li 
-                                className="px-4 py-2 text-red-400 border-gray-400 hover:text-red-700 hover:cursor-pointer"
+                                className="px-4 py-2 text-red-600 border-gray-400 hover:text-red-700 hover:cursor-pointer"
                                 onClick={() => deleteCommentHandler()}
                             >
                                 Delete
