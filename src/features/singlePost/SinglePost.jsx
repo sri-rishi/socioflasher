@@ -17,6 +17,7 @@ export const SinglePost = () => {
        if(newComment !== "") {
             dispatch(addComment({commentData: newComment, postId: postId}));
        }
+       setNewComment("")
     }
 
     if(!postInfo) {
