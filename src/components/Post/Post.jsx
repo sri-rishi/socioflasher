@@ -1,8 +1,8 @@
 import { Button, EditPostModal, UserImage, } from "../index/index";
-import { RiHeart3Line, IoBookmarkOutline, BsThreeDots, TbMessageCircle2} from "../../assests";
+import { RiHeart3Line, IoBookmarkOutline, BsThreeDots, TbMessageCircle2, AiFillHeart} from "../../assests";
 import { useDispatch, useSelector } from "react-redux";
 import { useState} from "react";
-import { deletePost} from "../../features/feed/postSlice";
+import { deletePost, likeDislikePost,} from "../../features/feed/postSlice";
 import { Link } from "react-router-dom";
 
 export const Post = ({post}) => {
@@ -12,7 +12,7 @@ export const Post = ({post}) => {
         content,
         media,
         comments,
-        likes: {likeCount, likedBy, dislikedBy},
+        likes: {likeCount, likedBy},
         createdAt,
         bookmark
     } = post
@@ -25,12 +25,16 @@ export const Post = ({post}) => {
     const dispatch = useDispatch();
 
     const userDetails = users?.find(person => person.username === username);
+    const isLike = likedBy?.some(person => person.username === user.username);
 
     const editMenuHandler = () => {
         setShowEditPost(dispaly => !dispaly);
         setShowPostMenu(dispaly => !dispaly);
     }  
 
+    const likeHandler = () => {
+        dispatch(likeDislikePost({postId: _id, isLiked: isLike ? true : false}))
+    }
     
     return (
         <div className="flex flex-col border w-full gap-4 bg-white max-w-xl rounded py-4">
@@ -113,22 +117,31 @@ export const Post = ({post}) => {
                                 className="text-gray-400 hover:cursor-pointer" 
                                 onClick={() => setShowFullContent(fullContent => !fullContent)}
                             >
-                                {showFullContent ? "Show less": "Show more"}
+                                {showFullContent ? "Show less" : "Show more"}
                             </span>
                         }
                     </div>
                 </Link>   
                 <div className="flex flex-row items-center justify-around px-3">
                     <div className="flex flex-row items-center gap-2">
-                        <Button className={"hover:text-gray-600 text-xl"} icon={<RiHeart3Line />}/>
-                        <p>{likeCount > 0 && likeCount}</p>
+                        <Button 
+                            className={"hover:text-gray-600 text-xl"} 
+                            icon={
+                                isLike ? 
+                                <AiFillHeart className="text-red-600"/>
+                                :
+                                <RiHeart3Line />
+                            }
+                            onClick={() => likeHandler()}
+                        />
+                        <p className="font-semibold">{likeCount > 0 && likeCount}</p>
                     </div>
                     <Button className={"hover:text-gray-600 text-xl font-black"} icon={<IoBookmarkOutline />}/>
 
                     <Link to={`/post/${_id}`}>
                         <div className="flex flex-row items-center gap-2">
                             <Button className={"hover:text-gray-600 text-xl"} icon={<TbMessageCircle2 />} />
-                            <p>{comments.length > 0 && comments.length}</p>
+                            <p className="font-semibold">{comments.length > 0 && comments.length}</p>
                         </div>
                     </Link>
                 </div>
