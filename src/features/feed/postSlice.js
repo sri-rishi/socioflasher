@@ -1,6 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { addCommentData, editCommentData} from "../../services/commentsService";
-import { addNewPostInData, deletePostFromData, editPostData, getAllPostsData} from "../../services/postService";
+import { addCommentData, deleteCommentOfPost, editCommentData} from "../../services/commentsService";
+import { 
+    addNewPostInData, 
+    deletePostFromData, 
+    editPostData, 
+    getAllPostsData,  
+    dislikePostCall, 
+    likePostCall 
+} from "../../services/postService";
 
 const initialState = {
     allPosts: [],
@@ -58,6 +65,28 @@ export const addComment = createAsyncThunk(
         return response.data;
     }
 );
+
+export const deleteComment = createAsyncThunk(
+    "posts/deleteComment",
+    async({postId, commentId}) => {
+        const token = localStorage.getItem("token");
+        const response = await deleteCommentOfPost(postId, commentId, token);
+        return response.data;
+    }
+)
+
+export const likeDislikePost = createAsyncThunk(
+    "posts/likeDislikePost",
+    async ({postId, isLiked}) => {
+        const token = localStorage.getItem("token");
+        const response = 
+            isLiked 
+            ? await dislikePostCall(postId, token)
+            : await likePostCall(postId, token);
+
+        return response.data;
+    }
+) 
 
 const postSlice = createSlice({
     name: "posts",
@@ -129,6 +158,28 @@ const postSlice = createSlice({
             state.postStatus = "error";
             state.error = action.payload;
         },
+        [deleteComment.pending]: (state) => {
+            state.postStatus = "pending";
+        },
+        [deleteComment.fulfilled]: (state, action) => {
+            state.postStatus = "fulfilled";
+            state.allPosts = action.payload.posts;
+        },
+        [deleteComment.rejected]: (state, action) => {
+            state.postStatus= "error";
+            state.error = action.payload;
+        },
+        [likeDislikePost.pending]: (state) => {
+            state.postStatus = "pending";
+        },
+        [likeDislikePost.fulfilled]: (state, action) => {
+            state.postStatus = "fulfilled";
+            state.allPosts = action.payload.posts;
+        },
+        [likeDislikePost.rejected]: (state, action) => {
+            state.postStatus = "error";
+            state.error = action.payload;
+        }
     }
 })
 
