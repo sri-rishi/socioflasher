@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect } from "react";
-import { getUsers } from "./features/profilePages/userSlice";
+import { getUsers } from "./features/ProfilePages/userSlice";
 import { AllRoutes } from "./routes/AllRoutes/Routes";
 import {useDispatch, useSelector} from "react-redux";
 import { getAllPosts } from "./features/feed/postSlice";
