@@ -3,7 +3,7 @@ import { Button, UserImage } from "../index";
 import { BsThreeDots, FaTimes, BsCheckLg} from "../../assests";
 import { useState } from "react";
 import {Link} from "react-router-dom";
-import { editComment } from "../../features/feed/postSlice";
+import { deleteComment, editComment } from "../../features/feed/postSlice";
 
 export const CommentBox = ({comment, postId}) => {
     const {
@@ -34,6 +34,10 @@ export const CommentBox = ({comment, postId}) => {
     const closeMenu = () => {
         setCommentValue(text)
         setDisableInput(value => value === false)
+    }
+
+    const deleteCommentHandler = () => {
+        dispatch(deleteComment({postId: postId, commentId: _id}));
     }
 
     return (
@@ -71,6 +75,12 @@ export const CommentBox = ({comment, postId}) => {
                             >
                                 Edit 
                             </li>
+                            <li 
+                                className="px-4 py-2 text-red-400 border-gray-400 hover:text-red-700 hover:cursor-pointer"
+                                onClick={() => deleteCommentHandler()}
+                            >
+                                Delete
+                            </li>
                         </ul>
                     </div>
                     : <></>
@@ -79,12 +89,12 @@ export const CommentBox = ({comment, postId}) => {
             <div className="flex flex-row items-center justify-between">
                 {
                     disableInput ?
-                    <p>
+                    <p className="p-4">
                         {text}
                     </p>
                     :
                     <input 
-                    className="p-4 w-full bg-transparent outline-transparent word-wrap"
+                    className="p-4 w-full bg-transparent outline-transparent"
                     value={commentValue} 
                     onChange={(e) => setCommentValue(e.target.value)}
                 />
