@@ -86,7 +86,7 @@ export const likeDislikePost = createAsyncThunk(
 
         return response.data;
     }
-) 
+)
 
 const postSlice = createSlice({
     name: "posts",
@@ -179,7 +179,7 @@ const postSlice = createSlice({
         [likeDislikePost.rejected]: (state, action) => {
             state.postStatus = "error";
             state.error = action.payload;
-        }
+        },
     }
 })
 
