@@ -1,9 +1,10 @@
 import { Button, EditPostModal, UserImage, } from "../index/index";
-import { RiHeart3Line, IoBookmarkOutline, BsThreeDots, TbMessageCircle2, AiFillHeart} from "../../assests";
+import { RiHeart3Line, IoBookmarkOutline, BsThreeDots, TbMessageCircle2, AiFillHeart, IoBookmark} from "../../assests";
 import { useDispatch, useSelector } from "react-redux";
 import { useState} from "react";
 import { deletePost, likeDislikePost,} from "../../features/feed/postSlice";
 import { Link } from "react-router-dom";
+import { addRemoveBookmarks } from "../../features/bookmarks/bookmarksSlice";
 
 export const Post = ({post}) => {
     const {
@@ -14,11 +15,11 @@ export const Post = ({post}) => {
         comments,
         likes: {likeCount, likedBy},
         createdAt,
-        bookmark
     } = post
 
     const {users} = useSelector(store => store?.users);
     const {user} = useSelector(store => store?.auth);
+    const {bookmarkPosts} = useSelector(store => store?.bookmarks)
     const [showFullContent, setShowFullContent] = useState(false);
     const [showPostMenu, setShowPostMenu] = useState(false);
     const [showEditPost, setShowEditPost] = useState(false);
@@ -26,6 +27,7 @@ export const Post = ({post}) => {
 
     const userDetails = users?.find(person => person.username === username);
     const isLike = likedBy?.some(person => person.username === user.username);
+    const isBookmark = bookmarkPosts?.some(savedPost => savedPost.username === user.username);
 
     const editMenuHandler = () => {
         setShowEditPost(dispaly => !dispaly);
@@ -34,6 +36,10 @@ export const Post = ({post}) => {
 
     const likeHandler = () => {
         dispatch(likeDislikePost({postId: _id, isLiked: isLike ? true : false}))
+    }
+
+    const bookmarkHandler = () => {
+        dispatch(addRemoveBookmarks({postId: _id, isBookmarked: isBookmark ? true : false}));
     }
     
     return (
@@ -136,7 +142,11 @@ export const Post = ({post}) => {
                         />
                         <p className="font-semibold">{likeCount > 0 && likeCount}</p>
                     </div>
-                    <Button className={"hover:text-gray-600 text-xl font-black"} icon={<IoBookmarkOutline />}/>
+                    <Button 
+                        className={"hover:text-gray-600 text-xl font-black"} 
+                        icon={isBookmark ? <IoBookmark /> : <IoBookmarkOutline />}
+                        onClick={() => bookmarkHandler()}
+                    />
 
                     <Link to={`/post/${_id}`}>
                         <div className="flex flex-row items-center gap-2">
