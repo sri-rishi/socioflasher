@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import {NavLink} from "react-router-dom"
+import {Link, NavLink} from "react-router-dom"
 import { GoHome, MdOutlineExplore, IoBookmarkOutline, CgProfile, logo, GiFeather, IoMdSearch, FiLogOut} from "../../assests";
 import { Button} from "../index";
 import { logoutUser } from "../../features/auth/authSlice";
@@ -18,12 +18,14 @@ export const MenuBar = () => {
 
     return (
         <aside className="hidden md:flex fixed h-screen top-0 flex-col md:gap-2 w-1/6 mt-16 md:m-0 items-end px-4 py-2 bg-slate-100 xl:items-center">
-            <header className="flex flex-row justify-end xl:items-center xl:justify-around w-full px-2">
-                <div className="w-16 xl:w-14">
-                    <img className="w-full object-cover" src={logo} alt="logo" />
-                </div>
-                <h1 className="hidden text-2xl font-semibold xl:flex">socio<span className="text-sky-400">Flasher</span></h1>
-            </header>
+            <Link to="/">
+                <header className="flex flex-row justify-end xl:items-center xl:justify-around w-full px-2">
+                    <div className="w-16 xl:w-14">
+                        <img className="w-full object-cover" src={logo} alt="logo" />
+                    </div>
+                    <h1 className="hidden text-2xl font-semibold xl:flex">socio<span className="text-sky-400">Flasher</span></h1>
+                </header>
+            </Link>
             <ul className="flex flex-col md:gap-1 py-6">
                 <NavLink to="/" style={getActiveStyle}>
                     <li className="flex flex-row items-center p-4 gap-4 hover:text-sky-400 hover:bg-white hover:shadow-md rounded-2xl">

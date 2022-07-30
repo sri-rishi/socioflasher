@@ -10,4 +10,5 @@ export {TbSend,TbMessageCircle2, TbCameraPlus} from "react-icons/tb";
 export {GiFeather} from "react-icons/gi";
 export {FiLogOut} from "react-icons/fi";
 export {FaTimes} from "react-icons/fa";
-export {BsThreeDots} from "react-icons/bs";
+export {BsThreeDots, BsCheckLg} from "react-icons/bs";
+export {AiFillHeart} from "react-icons/ai";
