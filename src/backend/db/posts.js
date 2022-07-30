@@ -17,7 +17,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "balika@gmail.com",
-    bookmark: [],
+    bookmarks: [],
     createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
@@ -25,28 +25,16 @@ export const posts = [
         _id: uuid(),
         username: "rishi@gmail.com",
         text: "Breaking Bad",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "shikha@gmail.com",
         text: "Agreed 💯",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "aman@gmail.com",
         text: "will go with Dark",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
@@ -63,7 +51,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "rishi@gmail.com",
-    bookmark: [],
+    bookmarks: [],
     createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
@@ -71,28 +59,16 @@ export const posts = [
         _id: uuid(),
         username: "rahul@gmail.com",
         text: "For me it depends.",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "ankur@gmail.com",
         text: "If there is no fact of SEO then 1st is ok. Otherwise, go with 2nd.",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "shreya@gmail.com",
         text: "Depending on how much the person is paying 😏",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
@@ -106,7 +82,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "rahul@gmail.com",
-    bookmark: [],
+    bookmarks: [],
     createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
@@ -114,28 +90,16 @@ export const posts = [
         _id: uuid(),
         username: "shikha@gmail.com",
         text: "electricity cut....",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "rishi@gmail.com",
         text: "aur chai pakode mil jaye",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "shreya@gmail.com",
         text: "perfect vide to code 😏",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
@@ -149,7 +113,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "rishi@gmail.com",
-    bookmark: [],
+    bookmarks: [],
     createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
@@ -157,28 +121,16 @@ export const posts = [
         _id: uuid(),
         username: "balika@gmail.com",
         text: "Same feelings here, don't wanna go to college 😤",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "ankur@gmail.com",
         text: "+1 bhai",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "shreya@gmail.com",
         text: "I feel you mine is starting from 2nd, Internship life >>>>>>>>>>>>",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
@@ -194,7 +146,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "rishi@gmail.com",
-    bookmark: [],
+    bookmarks: [],
     createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
@@ -202,28 +154,16 @@ export const posts = [
         _id: uuid(),
         username: "shikha@gmail.com",
         text: "Ultramarine flycatcher?",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "shreya@gmail.com",
         text: "The quality of THAT photo!!! 🔥🔥",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "aman@gmail.com",
         text: "Adorable 🥰",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
@@ -239,7 +179,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "rishi@gmail.com",
-    bookmark: [],
+    bookmarks: [],
     createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
@@ -247,28 +187,16 @@ export const posts = [
         _id: uuid(),
         username: "rahul@gmail.com",
         text: "awesome 😍",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "aman@gmail.com",
         text: "🔥🔥",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "balika@gmail.com",
         text: "Fantastic footage 🥰",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
@@ -282,7 +210,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "shikha@gmail.com",
-    bookmark: [],
+    bookmarks: [],
     createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
@@ -290,28 +218,16 @@ export const posts = [
         _id: uuid(),
         username: "aman@gmail.com",
         text: "Tune dekha h...Tujhe lgta h tune ni dekha pr tune dekha h.😾",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "rahul@gmail.com",
         text: "Count me in too",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "balika@gmail.com",
         text: "Why do you exist?",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
@@ -325,7 +241,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "ankur@gmail.com",
-    bookmark: [],
+    bookmarks: [],
     createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
@@ -333,28 +249,16 @@ export const posts = [
         _id: uuid(),
         username: "rishi@gmail.com",
         text: "It's really related to the complexity and how big the codebase is. Probably around 3-6 months.",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "rahul@gmail.com",
         text: "It's impossible to learn the whole codebase in a small period of time. \n If the codebase is huge, it can take months or years.",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "shikha@gmail.com",
         text: "You don't learn new codebase. You just pick it up and start working on it and eventually you'll learn on the job.",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
@@ -370,7 +274,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "shreya@gmail.com",
-    bookmark: [],
+    bookmarks: [],
     createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
@@ -378,28 +282,16 @@ export const posts = [
         _id: uuid(),
         username: "shikha@gmail.com",
         text: "legit my manager after giving me feedback but ending it with - 'but your nature of doing things on a fast pace justifies it'",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "rahul@gmail.com",
         text: "Aaaaaand their cursor moves right past your frame 5 times in 10 seconds 😬😬😬",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "shikha@gmail.com",
         text: "This was me yesterday",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
@@ -416,7 +308,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "ankur@gmail.com",
-    bookmark: [],
+    bookmarks: [],
     createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
@@ -424,28 +316,16 @@ export const posts = [
         _id: uuid(),
         username: "aman@gmail.com",
         text: "Location please, I want to taste😋",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "shikha@gmail.com",
         text: "Can I take some grapes 😂",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "rahul@gmail.com",
         text: "khatta angoor",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
@@ -459,7 +339,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "aman@gmail.com",
-    bookmark: [],
+    bookmarks: [],
     createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
