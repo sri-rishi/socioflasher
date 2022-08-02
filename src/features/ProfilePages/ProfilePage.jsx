@@ -13,13 +13,7 @@ export const ProfilePage = () => {
     return (
         <>
             <ProfileBox 
-                id={user?._id}
-                imgSrc={user?.profilePic} 
-                firstName={user?.firstName} 
-                lastName={user?.lastName}
-                userHandler={user?.userHandler}
-                bio={user?.bio}
-                link={user?.link}
+                singleUser={user}
                 setShowEditProfile={setShowEditProfile}
             />
             <div className="w-full flex flex-col items-center gap-4">
