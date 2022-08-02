@@ -14,7 +14,6 @@ export const ProfileBox = ({singleUser,setShowEditProfile}) => {
     } = singleUser;
 
     const {user} = useSelector(store => store?.auth);
-    const {users} = useSelector(store => store?.users)
     const dispatch = useDispatch();
 
     const isFollower = singleUser?.followers?.some(person => person.username === user.username);
