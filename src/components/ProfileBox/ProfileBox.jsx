@@ -1,23 +1,38 @@
 import { Button } from "../index";
-import { useSelector} from "react-redux";
+import { useSelector, useDispatch} from "react-redux";
+import { followUnfollowUser } from "../../features/profilePages/userSlice";
 
-export const ProfileBox = ({
-    id,
-    imgSrc, 
-    firstName,
-    lastName,
-    userHandler,
-    bio,
-    link,
-    setShowEditProfile
-}) => {
+export const ProfileBox = ({singleUser,setShowEditProfile}) => {
+    const {
+        _id,
+        profilePic, 
+        firstName,
+        lastName,
+        userHandler,
+        bio,
+        link,
+    } = singleUser;
 
     const {user} = useSelector(store => store?.auth);
+    const {users} = useSelector(store => store?.users)
+    const dispatch = useDispatch();
+
+    const isFollower = singleUser?.followers?.some(person => person.username === user.username);
+
+    const followerHandler = () => {
+        dispatch(
+            followUnfollowUser({
+                followUserId: _id, 
+                dispatch: dispatch,
+                isFollowed: isFollower ? true : false
+            })
+        )
+    }
 
     return (
         <div className="flex flex-row justify-evenly w-full max-w-xl bg-white py-4 border rounded">
             <div className="w-36 h-36 p-2">
-                <img className="w-full rounded-full" src={imgSrc && imgSrc} alt={`${firstName} pic`} />
+                <img className="w-full rounded-full" src={profilePic && profilePic} alt={`${firstName} pic`} />
             </div>
             <div className="flex flex-col gap-8 p-2">
                 <div className="flex flex-row items-center justify-between">
@@ -26,14 +41,18 @@ export const ProfileBox = ({
                         <p className="text-gray-400">{`@${userHandler}`}</p>
                     </div>
                     {
-                        id === user._id ? 
+                        _id === user._id ? 
                         <Button 
                             className={"bg-slate-700 px-4 py-1.5 text-white rounded hover:bg-slate-800"} 
                             text={"Edit"}
                             onClick={() => setShowEditProfile(true)}
                         />
                         : 
-                        <Button className="bg-sky-600 py-1 px-3 rounded-2xl text-white hover:bg-sky-700" text={"Follow"}/>
+                        <Button 
+                            className="bg-sky-600 py-1 px-3 rounded-2xl text-white hover:bg-sky-700" 
+                            text={isFollower ? "Unfollow" : "Follow"}
+                            onClick={() => followerHandler()}
+                        />
                     }
                 </div>
                 <p className="text-gray-700 font-medium">
