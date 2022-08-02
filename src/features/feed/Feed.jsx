@@ -2,13 +2,27 @@ import { Post, UserImage, Button} from "../../components/index/index";
 import { useDispatch, useSelector } from "react-redux";
 import "./feed.css";
 import { openNewPostModal } from "../../components/NewPostBox/newPostBoxSlice";
+import { useEffect, useState } from "react";
 
 export const Feed = () => {
     const {user} = useSelector(store => store?.auth);
     const {allPosts} = useSelector(store => store?.post);
     const dispatch = useDispatch();
+    const [shownPosts, setShownPosts] = useState([])
 
-    const userPosts = allPosts?.filter(person => person.username === user.username);
+    useEffect(() => {
+        if(allPosts) {
+            setShownPosts(
+                allPosts
+                .filter(singlePost => 
+                    singlePost?.username === user?.username 
+                    || user?.following?.find(person => singlePost?.username === person?.username)
+                )
+            )
+        }
+    }, [user, allPosts])
+    
+   
 
     return (
         <>
@@ -31,8 +45,8 @@ export const Feed = () => {
             </div>
             <div className="w-full flex flex-col items-center gap-4">
                 {
-                   userPosts.length !== 0 ?
-                   userPosts.map(post => (
+                   shownPosts.length !== 0 ?
+                   shownPosts.map(post => (
                     <Post key={post._id} post={post}/>
                    )) :
                    <p>Start following to see some post</p>
