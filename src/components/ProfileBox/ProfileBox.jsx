@@ -1,6 +1,6 @@
 import { Button } from "../index";
 import { useSelector, useDispatch} from "react-redux";
-import { followUnfollowUser } from "../../features/profilePages/userSlice";
+import { followUnfollowUser } from "../../features/ProfilePages/userSlice";
 
 export const ProfileBox = ({singleUser,setShowEditProfile}) => {
     const {

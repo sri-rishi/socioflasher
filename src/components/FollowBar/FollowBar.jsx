@@ -1,7 +1,7 @@
 import { Button, UserImage, SearchBox } from "../index/index";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { followUnfollowUser } from "../../features/profilePages/userSlice";
+import { followUnfollowUser } from "../../features/ProfilePages/userSlice";
 import { useEffect, useState } from "react";
 
 export const FollowBar = () => {
