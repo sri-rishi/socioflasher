@@ -1,10 +1,13 @@
-import { Header, FloatPostBtn, FollowBar, MenuBar, Navbar, Footer, NewPostBox} from "../../components/index"
+import { ToastContainer } from "react-toastify"
+import { Header, FloatPostBtn, FollowBar, MenuBar, Navbar, Footer, NewPostBox} from "../../components/index";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Template = ({children}) => {
     return (
         <div>
             <div className="w-full">
             <Navbar />
+            <ToastContainer />
             <div className="md:flex w-full flex-row relative">
                 <MenuBar />
                 <NewPostBox />
