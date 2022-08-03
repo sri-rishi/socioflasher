@@ -14,13 +14,7 @@ export const OtherUsersProfile = () => {
     return (
         <>
             <ProfileBox 
-                id={otherUser?._id}
-                imgSrc={otherUser?.profilePic} 
-                firstName={otherUser?.firstName} 
-                lastName={otherUser?.lastName}
-                userHandler={otherUser?.userHandler}
-                bio={otherUser?.bio}
-                link={otherUser?.link}
+                singleUser={otherUser}
             />
             <div className="w-full flex flex-col items-center gap-4">
                 {

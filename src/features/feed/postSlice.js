@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import {toast} from "react-toastify";
 import { addCommentData, deleteCommentOfPost, editCommentData} from "../../services/commentsService";
 import { 
     addNewPostInData, 
@@ -86,7 +87,7 @@ export const likeDislikePost = createAsyncThunk(
 
         return response.data;
     }
-) 
+)
 
 const postSlice = createSlice({
     name: "posts",
@@ -119,11 +120,13 @@ const postSlice = createSlice({
         },
         [deletePost.fulfilled]: (state, action) => {
             state.postStatus = "fulfilled";
-            state.allPosts = action.payload.posts
+            state.allPosts = action.payload.posts;
+            toast.success("Deleted post");
         },
         [deletePost.rejected]: (state, action) => {
             state.postStatus = "error";
             state.error = action.payload;
+            toast.error("Something went wrong")
         },
         [addNewPost.pending]: (state) => {
             state.postStatus = "pending";
@@ -131,10 +134,12 @@ const postSlice = createSlice({
         [addNewPost.fulfilled]: (state, action) => {
             state.postStatus = "fulfilled";
             state.allPosts = action.payload.posts;
+            toast.success("Successfully Posted")
         },
         [addNewPost.rejected]: (state, action) => {
             state.postStatus = "error";
             state.error = action.payload;
+            toast.error("Something went wrong")
         },
         [editComment.pending]: (state) => {
             state.postStatus = "pending";
@@ -179,7 +184,7 @@ const postSlice = createSlice({
         [likeDislikePost.rejected]: (state, action) => {
             state.postStatus = "error";
             state.error = action.payload;
-        }
+        },
     }
 })
 

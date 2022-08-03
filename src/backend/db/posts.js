@@ -17,82 +17,55 @@ export const posts = [
       dislikedBy: [],
     },
     username: "balika@gmail.com",
-    bookmark: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    bookmarks: [],
+    createdAt: "2021-05-25T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
         username: "rishi@gmail.com",
         text: "Breaking Bad",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "shikha@gmail.com",
-        text: "Agreed 💯",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "Agreed",
       },
       {
         _id: uuid(),
         username: "aman@gmail.com",
         text: "will go with Dark",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
   {
     _id: uuid(),
     content: 
-      "Which type of developer are you?",
-
-    media: 
-      "https://pbs.twimg.com/media/FXnRvelWQAAAK9x?format=png&name=small",
+      "Which type of developer are you? 1.Using div 2.sementic tags",
     likes: {
       likeCount: 0,
       likedBy: [],
       dislikedBy: [],
     },
     username: "rishi@gmail.com",
-    bookmark: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    bookmarks: [],
+    createdAt: "2022-06-26T12:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
         username: "rahul@gmail.com",
         text: "For me it depends.",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "ankur@gmail.com",
         text: "If there is no fact of SEO then 1st is ok. Otherwise, go with 2nd.",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "shreya@gmail.com",
-        text: "Depending on how much the person is paying 😏",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "Depending on how much the person is paying",
       },
     ],
   },
@@ -106,169 +79,117 @@ export const posts = [
       dislikedBy: [],
     },
     username: "rahul@gmail.com",
-    bookmark: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    bookmarks: [],
+    createdAt: "2022-01-23T16:36:20+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
         username: "shikha@gmail.com",
         text: "electricity cut....",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "rishi@gmail.com",
         text: "aur chai pakode mil jaye",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "shreya@gmail.com",
-        text: "perfect vide to code 😏",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "perfect vide to code",
       },
     ],
   },
   {
     _id: uuid(),
     content: 
-      "My college will be starting from 5th Aug.\n I don't wanna leave my office😭😭",
+      "My college will be starting from 5th Aug.\n I don't wanna leave my office",
     likes: {
       likeCount: 0,
       likedBy: [],
       dislikedBy: [],
     },
     username: "rishi@gmail.com",
-    bookmark: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    bookmarks: [],
+    createdAt: "2022-07-20T22:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
         username: "balika@gmail.com",
-        text: "Same feelings here, don't wanna go to college 😤",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "Same feelings here, don't wanna go to college",
       },
       {
         _id: uuid(),
         username: "ankur@gmail.com",
         text: "+1 bhai",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "shreya@gmail.com",
         text: "I feel you mine is starting from 2nd, Internship life >>>>>>>>>>>>",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
   {
     _id: uuid(),
     content: 
-      "Beautiful bird 💙🤍💙",
-    media: 
-      "https://pbs.twimg.com/media/FXO5XE_X0AAEiMr?format=jpg&name=small",
+      "How are these colleges? MAIT Delhi, JIIT Noida, MSIT Delhi and Graphic Era?",
     likes: {
       likeCount: 0,
       likedBy: [],
       dislikedBy: [],
     },
     username: "rishi@gmail.com",
-    bookmark: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    bookmarks: [],
+    createdAt: "2022-04-04T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
         username: "shikha@gmail.com",
-        text: "Ultramarine flycatcher?",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "Graphic era NOPPPE",
       },
       {
         _id: uuid(),
         username: "shreya@gmail.com",
-        text: "The quality of THAT photo!!! 🔥🔥",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "Go for JIIT Noida",
       },
       {
         _id: uuid(),
         username: "aman@gmail.com",
-        text: "Adorable 🥰",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "MAIT is the best among these",
       },
     ],
   },
   {
     _id: uuid(),
     content: 
-      "My love for monsoons 😍🐆",
-    media: 
-      "https://c4.wallpaperflare.com/wallpaper/210/744/971/wild-sumatran-tiger-rain-wallpaper-preview.jpg",
+      "Is paying for a gym trainer as a beginner worth it?",
     likes: {
       likeCount: 0,
       likedBy: [],
       dislikedBy: [],
     },
     username: "rishi@gmail.com",
-    bookmark: [],
+    bookmarks: [],
     createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
-        username: "rahul@gmail.com",
-        text: "awesome 😍",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        username: "is it worth paying for gym",
+        text: "awesome",
       },
       {
         _id: uuid(),
         username: "aman@gmail.com",
-        text: "🔥🔥",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "Not a personal trainer, but just take guidance from the general trainers available",
       },
       {
         _id: uuid(),
         username: "balika@gmail.com",
-        text: "Fantastic footage 🥰",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "No...I lost 8 kgs by doing home workout & by eating healthy(got abs too)",
       },
     ],
   },
@@ -282,36 +203,24 @@ export const posts = [
       dislikedBy: [],
     },
     username: "shikha@gmail.com",
-    bookmark: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    bookmarks: [],
+    createdAt: "2021-12-23T16:38:38+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
         username: "aman@gmail.com",
-        text: "Tune dekha h...Tujhe lgta h tune ni dekha pr tune dekha h.😾",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "Tune dekha h...Tujhe lgta h tune ni dekha pr tune dekha h.",
       },
       {
         _id: uuid(),
         username: "rahul@gmail.com",
         text: "Count me in too",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "balika@gmail.com",
         text: "Why do you exist?",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
@@ -325,36 +234,24 @@ export const posts = [
       dislikedBy: [],
     },
     username: "ankur@gmail.com",
-    bookmark: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    bookmarks: [],
+    createdAt: "2022-03-08T20:45:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
         username: "rishi@gmail.com",
         text: "It's really related to the complexity and how big the codebase is. Probably around 3-6 months.",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "rahul@gmail.com",
         text: "It's impossible to learn the whole codebase in a small period of time. \n If the codebase is huge, it can take months or years.",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "shikha@gmail.com",
         text: "You don't learn new codebase. You just pick it up and start working on it and eventually you'll learn on the job.",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
@@ -362,90 +259,61 @@ export const posts = [
     _id: uuid(),
     content: 
       "When they rip apart your design but end the call with, 'This constructive feedback session was good; thanks for doing this'",
-    media: 
-      "https://i.pinimg.com/originals/b2/79/66/b27966140db68d0621628f2309f8a443.gif",
     likes: {
       likeCount: 0,
       likedBy: [],
       dislikedBy: [],
     },
     username: "shreya@gmail.com",
-    bookmark: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    bookmarks: [],
+    createdAt: "2022-05-23T09:58:17+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
         username: "shikha@gmail.com",
         text: "legit my manager after giving me feedback but ending it with - 'but your nature of doing things on a fast pace justifies it'",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
       {
         _id: uuid(),
         username: "rahul@gmail.com",
-        text: "Aaaaaand their cursor moves right past your frame 5 times in 10 seconds 😬😬😬",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "Aaaaaand their cursor moves right past your frame 5 times in 10 seconds",
       },
       {
         _id: uuid(),
         username: "shikha@gmail.com",
         text: "This was me yesterday",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
   },
   {
     _id: uuid(),
     content:
-      "Fresh from the garden 💕",
-
-    media: 
-      "https://pbs.twimg.com/media/FXnvvWgaUAA_t1H?format=jpg&name=medium",
+      "After paying taxes I realised that last financial year I worked 1 month for the government.",
     likes: {
       likeCount: 0,
       likedBy: [],
       dislikedBy: [],
     },
     username: "ankur@gmail.com",
-    bookmark: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    bookmarks: [],
+    createdAt: "2022-07-22T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
         username: "aman@gmail.com",
-        text: "Location please, I want to taste😋",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "Mine 2.5 atleast. Am I hiring the wrong CA",
       },
       {
         _id: uuid(),
         username: "shikha@gmail.com",
-        text: "Can I take some grapes 😂",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "Mere 3 mahine govt k naam",
       },
       {
         _id: uuid(),
         username: "rahul@gmail.com",
-        text: "khatta angoor",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        text: "I worked for 4 months",
       },
     ],
   },
@@ -459,7 +327,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "aman@gmail.com",
-    bookmark: [],
+    bookmarks: [],
     createdAt: "2021-05-23T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [

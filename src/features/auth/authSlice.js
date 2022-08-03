@@ -1,6 +1,7 @@
 import { createAsyncThunk , createSlice} from "@reduxjs/toolkit";
 import { loginUserService, signupUserService } from "../../services/authService";
 import { editUserDetails } from "../../services/usersService";
+import { toast } from "react-toastify";
 
 
 const initialState = {
@@ -39,6 +40,7 @@ const authSlice = createSlice({
         logoutUser:() => {
             localStorage.removeItem("token");
             localStorage.removeItem("user");
+            toast.success("Logged out successfully")
             return {
                 token: null,
                 user: null
@@ -55,10 +57,12 @@ const authSlice = createSlice({
             state.user = action.payload.foundUser;
             localStorage.setItem("token", state.token);
             localStorage.setItem("user", JSON.stringify(state.user));
+            toast.success("Successfully logged in")
         },
         [loginUser.rejected]: (state, action) => {
             state.authStatus = "error";
             state.error = action.payload;
+            toast.error("Something went wrong")
         },
         [signupUser.pending]: (state) => {
             state.authStatus = "pending";
@@ -69,10 +73,12 @@ const authSlice = createSlice({
             state.user = action.payload.createdUser;
             localStorage.setItem("token", state.token);
             localStorage.setItem("user", JSON.stringify(state.user));
+            toast.success("Successfully created account")
         },
         [signupUser.rejected]: (state, action) => {
             state.authStatus = "error";
             state.error = action.payload;
+            toast.error("Something went wrong")
         },
         [updateUserDetails.pending]: (state) => {
             state.authStatus = "pending";
@@ -80,11 +86,12 @@ const authSlice = createSlice({
         [updateUserDetails.fulfilled]: (state, action) => {
             state.authStatus = "fulfilled";
             state.user = action.payload.user;
-            localStorage.setItem("user", JSON.stringify(state.user))
+            localStorage.setItem("user", JSON.stringify(state.user));
         },
         [updateUserDetails.rejected]: (state, action) => {
             state.authStatus = "error";
             state.error = action.payload;
+            toast.error("Something went wrong")
         }
     }
 })

@@ -1,10 +1,10 @@
 import {IoMdSearch} from "../../assests"
-import { Button } from "../index";
+import { Button } from "../../components/Button/Button";
 import { useState, useRef, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-export const SearchBox = () => {
+export const ExploreSearchBox = () => {
     const {users} = useSelector((state) => state?.users);
     const {user} = useSelector((state) => state?.auth);
     const [suggestions, setSuggestions] = useState([]);
@@ -12,14 +12,14 @@ export const SearchBox = () => {
     const navigate = useNavigate();
     let timerId = useRef();
     useEffect(() => {
-    clearTimeout(timerId.current);
-    if (input.trim().length > 0)
+        clearTimeout(timerId.current);
+        if (input.trim().length > 0)
         timerId.current = setTimeout(() => {
-        setSuggestions(
+            setSuggestions(
             users?.filter((eleUser) =>
-            `${eleUser.firstName} ${eleUser.lastName}`.toLowerCase().includes(input.toLowerCase())
+                `${eleUser.firstName} ${eleUser.lastName}`.toLowerCase().includes(input.toLowerCase())
             )
-        );
+            );
         }, 500);
     }, [input]);
     return (
@@ -41,7 +41,7 @@ export const SearchBox = () => {
                     onClick={() => {
                         user.userHandler === userInfo?.userHandler
                         ? navigate("/profile")
-                        : navigate(`/userProfile/${userInfo._id}`);
+                        : navigate(`/userProfile/${userInfo?._id}`);
                         setInput("");
                     }}
                     >

@@ -1,6 +1,6 @@
 import { Post, Button} from "../../components/index";
-import { IoMdSearch } from "../../assests";
 import { useSelector } from "react-redux";
+import { ExploreSearchBox } from "./ExploreSearchBox";
 
 export const Explore = () => {
     const {user} = useSelector(store => store?.auth);
@@ -10,12 +10,7 @@ export const Explore = () => {
 
     return (
         <>  
-            <div 
-                className="flex flex-row items-center p-2 border-2 border-slate-200 rounded-md bg-white max-w-xl w-full gap-2 lg:hidden"
-            >
-                <Button className={"text-2xl"} icon={<IoMdSearch />} />
-                <input className="outline-transparent w-full" placeholder="Search Posts, People, anything"/>
-            </div>
+            <ExploreSearchBox />
             <div className="w-full flex flex-col items-center gap-4">
                 {
                     postToShown.length !== 0?

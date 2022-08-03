@@ -16,7 +16,8 @@ export {
     FaTimes,
     BsThreeDots, 
     BsCheckLg,
-    AiFillHeart
+    AiFillHeart,
+    IoBookmark
 } from "./icons";
 
 export {
