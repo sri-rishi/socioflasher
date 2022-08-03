@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {useParams} from "react-router-dom"
 import { useState } from "react";
 import { addComment} from "../feed/postSlice";
+import { BallTriangle } from "react-loader-spinner";
 
 export const SinglePost = () => {
     const {postId} = useParams();
@@ -21,7 +22,15 @@ export const SinglePost = () => {
     }
 
     if(!postInfo) {
-        return  <h1>Loading</h1>;
+        return (
+            <div className="flex flex-row items-center justify-center top-1/2 absolute">
+                <BallTriangle 
+                    color="#00BFFF" 
+                    height={100} 
+                    width={100}
+                />
+            </div>
+        )
     }
 
     return (
