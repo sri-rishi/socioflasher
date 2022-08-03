@@ -41,6 +41,16 @@ export const Post = ({post}) => {
     const bookmarkHandler = () => {
         dispatch(addRemoveBookmarks({postId: _id, isBookmarked: isBookmark ? true : false}));
     }
+
+    const postTime = () => {
+        const date = new Date(createdAt);
+        const postDate = date.getDate() +
+        " " +
+        date.toLocaleString("default", { month: "long" }) +
+        ", " +
+        date.getFullYear();
+        return postDate;
+    } 
     
     return (
         <div className="flex flex-col border w-full gap-4 bg-white max-w-xl rounded py-4">
@@ -60,7 +70,7 @@ export const Post = ({post}) => {
                                 <p className="font-medium text-gray-400">@{userDetails?.userHandler}</p>
                             </div>
                         </Link>
-                        <small className="text-gray-600">1m ago</small>
+                        <small className="text-gray-600">{postTime()}</small>
                     </div>
                 </div>
                 
