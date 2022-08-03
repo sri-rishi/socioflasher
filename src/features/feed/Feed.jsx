@@ -8,7 +8,7 @@ export const Feed = () => {
     const {user} = useSelector(store => store?.auth);
     const {allPosts} = useSelector(store => store?.post);
     const dispatch = useDispatch();
-    const [shownPosts, setShownPosts] = useState([])
+    const [shownPosts, setShownPosts] = useState([]);
 
     useEffect(() => {
         if(allPosts) {
@@ -22,7 +22,13 @@ export const Feed = () => {
         }
     }, [user, allPosts])
     
-   
+    const trendingHandler = () => {
+        setShownPosts(posts => [...posts].sort((a, b) => b.likes.likeCount - a.likes.likeCount))
+    }
+
+    const latestHandler = () => {
+        setShownPosts(posts => [...posts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)))
+    }
 
     return (
         <>
@@ -41,7 +47,19 @@ export const Feed = () => {
                 <Button 
                     className={"font-semibold bg-sky-600 py-1 px-6 rounded-2xl text-white hover:bg-sky-700"} 
                     text={"Add"}
-                    />
+                />
+            </div>
+            <div className="w-full flex flex-row items-center justify-between max-w-xl bg-white px-4 py-2 rounded border text-sky-800 font-semibold">
+                <Button 
+                    className={"w-1/2 border-r hover:bg-gray-100 p-2"} 
+                    text="Trending"
+                    onClick={() => trendingHandler()}
+                />
+                <Button 
+                    className={"w-1/2 border-l hover:bg-gray-100 p-2"} 
+                    text="Latest"
+                    onClick={() => latestHandler()}
+                />
             </div>
             <div className="w-full flex flex-col items-center gap-4">
                 {
