@@ -134,7 +134,7 @@ export const posts = [
   {
     _id: uuid(),
     content: 
-      "Beautiful bird",
+      "How are these colleges? MAIT Delhi, JIIT Noida, MSIT Delhi and Graphic Era?",
     likes: {
       likeCount: 0,
       likedBy: [],
@@ -148,24 +148,24 @@ export const posts = [
       {
         _id: uuid(),
         username: "shikha@gmail.com",
-        text: "Ultramarine flycatcher?",
+        text: "Graphic era NOPPPE",
       },
       {
         _id: uuid(),
         username: "shreya@gmail.com",
-        text: "The quality of THAT photo!!!",
+        text: "Go for JIIT Noida",
       },
       {
         _id: uuid(),
         username: "aman@gmail.com",
-        text: "Adorable",
+        text: "MAIT is the best among these",
       },
     ],
   },
   {
     _id: uuid(),
     content: 
-      "My love for monsoons ",
+      "Is paying for a gym trainer as a beginner worth it?",
     likes: {
       likeCount: 0,
       likedBy: [],
@@ -178,18 +178,18 @@ export const posts = [
     comments: [
       {
         _id: uuid(),
-        username: "rahul@gmail.com",
+        username: "is it worth paying for gym",
         text: "awesome",
       },
       {
         _id: uuid(),
         username: "aman@gmail.com",
-        text: "amazing",
+        text: "Not a personal trainer, but just take guidance from the general trainers available",
       },
       {
         _id: uuid(),
         username: "balika@gmail.com",
-        text: "Fantastic footage",
+        text: "No...I lost 8 kgs by doing home workout & by eating healthy(got abs too)",
       },
     ],
   },
