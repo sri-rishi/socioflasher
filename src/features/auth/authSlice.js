@@ -87,7 +87,6 @@ const authSlice = createSlice({
             state.authStatus = "fulfilled";
             state.user = action.payload.user;
             localStorage.setItem("user", JSON.stringify(state.user));
-            toast.success("Successfully edited details")
         },
         [updateUserDetails.rejected]: (state, action) => {
             state.authStatus = "error";
