@@ -27,7 +27,7 @@ export const Post = ({post}) => {
 
     const userDetails = users?.find(person => person.username === username);
     const isLike = likedBy?.some(person => person.username === user.username);
-    const isBookmark = bookmarkPosts?.some(savedPost => savedPost.username === user.username);
+    const isBookmark = bookmarkPosts?.some(savedPost => savedPost._id === post._id);
 
     const editMenuHandler = () => {
         setShowEditPost(dispaly => !dispaly);
