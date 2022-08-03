@@ -18,7 +18,7 @@ export const posts = [
     },
     username: "balika@gmail.com",
     bookmarks: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    createdAt: "2021-05-25T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
@@ -29,7 +29,7 @@ export const posts = [
       {
         _id: uuid(),
         username: "shikha@gmail.com",
-        text: "Agreed 💯",
+        text: "Agreed",
       },
       {
         _id: uuid(),
@@ -41,10 +41,7 @@ export const posts = [
   {
     _id: uuid(),
     content: 
-      "Which type of developer are you?",
-
-    media: 
-      "https://pbs.twimg.com/media/FXnRvelWQAAAK9x?format=png&name=small",
+      "Which type of developer are you? 1.Using div 2.sementic tags",
     likes: {
       likeCount: 0,
       likedBy: [],
@@ -52,7 +49,7 @@ export const posts = [
     },
     username: "rishi@gmail.com",
     bookmarks: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    createdAt: "2022-06-26T12:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
@@ -68,7 +65,7 @@ export const posts = [
       {
         _id: uuid(),
         username: "shreya@gmail.com",
-        text: "Depending on how much the person is paying 😏",
+        text: "Depending on how much the person is paying",
       },
     ],
   },
@@ -83,7 +80,7 @@ export const posts = [
     },
     username: "rahul@gmail.com",
     bookmarks: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    createdAt: "2022-01-23T16:36:20+05:30",
     updatedAt: formatDate(),
     comments: [
       {
@@ -99,14 +96,14 @@ export const posts = [
       {
         _id: uuid(),
         username: "shreya@gmail.com",
-        text: "perfect vide to code 😏",
+        text: "perfect vide to code",
       },
     ],
   },
   {
     _id: uuid(),
     content: 
-      "My college will be starting from 5th Aug.\n I don't wanna leave my office😭😭",
+      "My college will be starting from 5th Aug.\n I don't wanna leave my office",
     likes: {
       likeCount: 0,
       likedBy: [],
@@ -114,13 +111,13 @@ export const posts = [
     },
     username: "rishi@gmail.com",
     bookmarks: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    createdAt: "2022-07-20T22:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
         username: "balika@gmail.com",
-        text: "Same feelings here, don't wanna go to college 😤",
+        text: "Same feelings here, don't wanna go to college",
       },
       {
         _id: uuid(),
@@ -137,9 +134,7 @@ export const posts = [
   {
     _id: uuid(),
     content: 
-      "Beautiful bird 💙🤍💙",
-    media: 
-      "https://pbs.twimg.com/media/FXO5XE_X0AAEiMr?format=jpg&name=small",
+      "Beautiful bird",
     likes: {
       likeCount: 0,
       likedBy: [],
@@ -147,7 +142,7 @@ export const posts = [
     },
     username: "rishi@gmail.com",
     bookmarks: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    createdAt: "2022-04-04T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
@@ -158,21 +153,19 @@ export const posts = [
       {
         _id: uuid(),
         username: "shreya@gmail.com",
-        text: "The quality of THAT photo!!! 🔥🔥",
+        text: "The quality of THAT photo!!!",
       },
       {
         _id: uuid(),
         username: "aman@gmail.com",
-        text: "Adorable 🥰",
+        text: "Adorable",
       },
     ],
   },
   {
     _id: uuid(),
     content: 
-      "My love for monsoons 😍🐆",
-    media: 
-      "https://c4.wallpaperflare.com/wallpaper/210/744/971/wild-sumatran-tiger-rain-wallpaper-preview.jpg",
+      "My love for monsoons ",
     likes: {
       likeCount: 0,
       likedBy: [],
@@ -186,17 +179,17 @@ export const posts = [
       {
         _id: uuid(),
         username: "rahul@gmail.com",
-        text: "awesome 😍",
+        text: "awesome",
       },
       {
         _id: uuid(),
         username: "aman@gmail.com",
-        text: "🔥🔥",
+        text: "amazing",
       },
       {
         _id: uuid(),
         username: "balika@gmail.com",
-        text: "Fantastic footage 🥰",
+        text: "Fantastic footage",
       },
     ],
   },
@@ -211,13 +204,13 @@ export const posts = [
     },
     username: "shikha@gmail.com",
     bookmarks: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    createdAt: "2021-12-23T16:38:38+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
         username: "aman@gmail.com",
-        text: "Tune dekha h...Tujhe lgta h tune ni dekha pr tune dekha h.😾",
+        text: "Tune dekha h...Tujhe lgta h tune ni dekha pr tune dekha h.",
       },
       {
         _id: uuid(),
@@ -242,7 +235,7 @@ export const posts = [
     },
     username: "ankur@gmail.com",
     bookmarks: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    createdAt: "2022-03-08T20:45:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
@@ -266,8 +259,6 @@ export const posts = [
     _id: uuid(),
     content: 
       "When they rip apart your design but end the call with, 'This constructive feedback session was good; thanks for doing this'",
-    media: 
-      "https://i.pinimg.com/originals/b2/79/66/b27966140db68d0621628f2309f8a443.gif",
     likes: {
       likeCount: 0,
       likedBy: [],
@@ -275,7 +266,7 @@ export const posts = [
     },
     username: "shreya@gmail.com",
     bookmarks: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    createdAt: "2022-05-23T09:58:17+05:30",
     updatedAt: formatDate(),
     comments: [
       {
@@ -286,7 +277,7 @@ export const posts = [
       {
         _id: uuid(),
         username: "rahul@gmail.com",
-        text: "Aaaaaand their cursor moves right past your frame 5 times in 10 seconds 😬😬😬",
+        text: "Aaaaaand their cursor moves right past your frame 5 times in 10 seconds",
       },
       {
         _id: uuid(),
@@ -298,10 +289,7 @@ export const posts = [
   {
     _id: uuid(),
     content:
-      "Fresh from the garden 💕",
-
-    media: 
-      "https://pbs.twimg.com/media/FXnvvWgaUAA_t1H?format=jpg&name=medium",
+      "After paying taxes I realised that last financial year I worked 1 month for the government.",
     likes: {
       likeCount: 0,
       likedBy: [],
@@ -309,23 +297,23 @@ export const posts = [
     },
     username: "ankur@gmail.com",
     bookmarks: [],
-    createdAt: "2021-05-23T10:38:12+05:30",
+    createdAt: "2022-07-22T10:38:12+05:30",
     updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
         username: "aman@gmail.com",
-        text: "Location please, I want to taste😋",
+        text: "Mine 2.5 atleast. Am I hiring the wrong CA",
       },
       {
         _id: uuid(),
         username: "shikha@gmail.com",
-        text: "Can I take some grapes 😂",
+        text: "Mere 3 mahine govt k naam",
       },
       {
         _id: uuid(),
         username: "rahul@gmail.com",
-        text: "khatta angoor",
+        text: "I worked for 4 months",
       },
     ],
   },
