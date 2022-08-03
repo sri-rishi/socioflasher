@@ -11,11 +11,15 @@ export const ProfileBox = ({singleUser,setShowEditProfile}) => {
         userHandler,
         bio,
         link,
+        followers, 
+        following
     } = singleUser;
 
     const {user} = useSelector(store => store?.auth);
+    const {allPosts} = useSelector(store => store?.post);
     const dispatch = useDispatch();
 
+    const userPosts = allPosts?.filter(post => post.username === singleUser.username);
     const isFollower = singleUser?.followers?.some(person => person.username === user.username);
 
     const followerHandler = () => {
@@ -58,9 +62,9 @@ export const ProfileBox = ({singleUser,setShowEditProfile}) => {
                     {bio}
                 </p>
                 <div className="flex flex-row  gap-4 text-gray-700 font-medium">
-                    <p>3 posts</p>
-                    <p>3 Followers</p>
-                    <p>3 Following</p>
+                    <p>{userPosts && userPosts.length} Posts</p>
+                    <p>{followers && followers.length} Followers</p>
+                    <p>{following && following.length} Following</p>
                 </div>
                 <a className="text-sky-600" href="https://neog-lms.vercel.app/docs/prds/social-media-app" target="_blank" rel="noopener noreferrer">
                     <p>{link}</p>
