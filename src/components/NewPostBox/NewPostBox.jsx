@@ -4,6 +4,7 @@ import { Button, UserImage } from "../index";
 import { FaTimes } from "../../assests";
 import { closeNewPostModal } from "./newPostBoxSlice";
 import { addNewPost } from "../../features/feed/postSlice";
+import {toast} from "react-toastify";
 
 export const NewPostBox = () => {
     const {newPostModalStatus} = useSelector(store => store?.newPostModal);
@@ -14,11 +15,10 @@ export const NewPostBox = () => {
     });
 
     const postChangeHandler = (e) => {
-        if(newPostDetails.content.length <= 275) {
+        if(e.target.value <= 275) {
             setNewPostDetails(details => ({...details, content: e.target.value}));
         }else {
-            // this will go in toast
-            alert("You have exceeded limit");
+            toast.error("You have reached limit");
         }
     }
 
