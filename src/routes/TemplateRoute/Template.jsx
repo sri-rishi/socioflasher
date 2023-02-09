@@ -15,7 +15,7 @@ export const Template = ({children}) => {
 
     useEffect(() => {
         setLoader(true);
-        setTimeout(() => setLoader(false), 5000);
+        setTimeout(() => setLoader(false), 3000);
     }, [location.pathname])
 
     return (
@@ -25,7 +25,10 @@ export const Template = ({children}) => {
             <ToastContainer />
             <div className="md:flex w-full flex-row relative">
                 <MenuBar />
-                <NewPostBox />
+                {
+                    !loader &&
+                    <NewPostBox />
+                }
                 <main className="main w-full min-h-screen mt-16 pt-4 md:pt-0 flex flex-col items-center gap-4 border-x md:mt-0 md:w-5/6 md:ml-1/6">
                     <Header path={location.pathname}/>
                     <div className="w-full flex flex-col items-center pb-36 md:pb-4 gap-4"> 
