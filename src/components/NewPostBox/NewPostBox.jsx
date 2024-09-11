@@ -15,7 +15,8 @@ export const NewPostBox = () => {
     });
 
     const postChangeHandler = (e) => {
-        if(e.target.value <= 275) {
+        let inputText = e.target.value
+        if(inputText.length <= 275) {
             setNewPostDetails(details => ({...details, content: e.target.value}));
         }else {
             toast.error("You have reached limit");
